@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  grade_level: 1
+  rating: 1
+  price: 9.99
+  no_of_courses: 1
+  instructor_id: 
+  category_id: 
+
+two:
+  name: MyString
+  grade_level: 1
+  rating: 1
+  price: 9.99
+  no_of_courses: 1
+  instructor_id: 
+  category_id: 
