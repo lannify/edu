@@ -1,0 +1,23 @@
+{
+  "name": "edu",
+  "homepage": "https://github.com/lannng/edu",
+  "authors": [
+    "lannng <lannguyen309@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5"
+  }
+}
