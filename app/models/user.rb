@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
          association_foreign_key: :student_user_id
 
  	def as_json(options = {})
-    super(options.merge(include: [:curriculums, :students))
+    super(options.merge(include: [:curriculums, :students]))
 	end  
 end
