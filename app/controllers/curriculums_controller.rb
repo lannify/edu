@@ -14,6 +14,6 @@ class CurriculumsController < ApplicationController
 
 	private
 	def curr_params
-		params.require(:curriculum).permit(:name)
+		params.require(:curriculum).permit(:name, :grade_level)
 	end
 end
