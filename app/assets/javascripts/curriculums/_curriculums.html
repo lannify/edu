@@ -1,244 +1,45 @@
-<hr> 
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-
- <div ng-repeat="curriculum in curriculums">
- 	{{curriculum.name}}
- 	<div ng-repeat="subject in curriculum.subjects">
- 		{{subject.title}}
- 		<div ng-repeat="course in subject.courses">
- 			{{course.title}}
- 			<div ng-repeat="chapter in course.chapters">
- 				{{chapter.title}}
- 			</div>
- 		</div>
- 	</div>
- </div>
-
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 profile_box">
-      <div class="profile_box">
-        <h1><span>Find a Curriculum</span></h1>
-        
+	<div class="row">
+		<div class="col-md-6 profile_box">
+			<div class="profile_box">
+				<h1><span>Find a Curriculum</span></h1>
+			</div>
+		</div>
 
-      </div>
-    </div>
-    
-  	<div class="col-md-6 dashboard_top_buttons">
-      
-  	<input type="text" name="filter" placeholder="Search Curriculums">
-  
+		<div class="col-md-6 dashboard_top_buttons">
+			<input type="text" name="filter" placeholder="Search Curriculums">
+		</div>
+	</div>
 
-    </div>
-  </div>
+	<div class="instruct_table">
+		<h3>Curriculums</h3>
+		<hr>
+		<div class="curriculum_subject_box">
+			<div class="col-md-6" ng-repeat="curriculum in curriculums">
+					<div class="page-header">
+						<h3>{{curriculum.name}}</h3>
+					</div>
+					<div class="subject_body_content">
+						<h5>Teaching Style: Montasorri Learning</h5>
+						<ul class="list-unstyled subject_category" ng-repeat="subject in curriculum.subjects">
 
-  <div class="instruct_table">
+							<li><h4 class="course_title">{{subject.title}}</h4></li>
+							<ul ng-repeat="course in subject.courses">
+								<li><h4 class="chapter_title">{{course.title}}</h4></li>
+								<ul ng-repeat="chapter in course.chapters">
 
-    <h3>Curriculums</h3>
-    <hr>
+									<li><h4 class="lesson_title">{{chapter.title}}</h4></li>
 
-    <div class="curriculum_subject_box">
-      <div class="col-md-6">
-        <div class="page-header">
-          <h3>Nick's 5th Grade</h3>
-        </div>
-
-        <div class="subject_body_content">
-        	<h5>Teaching Style: Montasorri Learning</h5>
-          
-
-          <ul class="list-unstyled subject_category">
-            <li><h4 class="course_title">Science</h4></li>
-            
-            <ul>
-              <li><h4 class="chapter_title">Algebra 1</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Pythagarium Therum</h4></li>
-              	<li><h4 class="lesson_title">Counting</h4></li>
-
-              	<li><h4 class="lesson_title">Equation Clues</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-
-              <li><h4 class="chapter_title">Geomtry</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Square</h4></li>
-              	<li><h4 class="lesson_title">Circle</h4></li>
-
-              	<li><h4 class="lesson_title">Triangle</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-            </ul>
-
-
-          </ul>
-
-
-          <ul class="list-unstyled subject_category">
-            <li><h4 class="course_title">History</h4></li>
-            
-            <ul>
-              <li><h4 class="chapter_title">Algebra 1</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Pythagarium Therum</h4></li>
-              	<li><h4 class="lesson_title">Counting</h4></li>
-
-              	<li><h4 class="lesson_title">Equation Clues</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-
-              <li><h4 class="chapter_title">Geomtry</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Square</h4></li>
-              	<li><h4 class="lesson_title">Circle</h4></li>
-
-              	<li><h4 class="lesson_title">Triangle</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-            </ul>
-
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-6">
-        <div class="page-header">
-          <h3>Fun 3rd Grade</h3>
-        </div>
-
-        <div class="subject_body_content">
-        	<h5>Teaching Style: Montasorri Learning</h5>
-          <ul class="list-unstyled subject_category">
-            <li><h4 class="course_title">Math</h4></li>
-            
-            <ul>
-              <li><h4 class="chapter_title">Algebra 1</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Pythagarium Therum</h4></li>
-              	<li><h4 class="lesson_title">Counting</h4></li>
-
-              	<li><h4 class="lesson_title">Equation Clues</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-
-              <li><h4 class="chapter_title">Geomtry</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Square</h4></li>
-              	<li><h4 class="lesson_title">Circle</h4></li>
-
-              	<li><h4 class="lesson_title">Triangle</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-            </ul>
-
-
-          </ul>
-
-
-          <ul class="list-unstyled subject_category">
-            <li><h4 class="course_title">Science</h4></li>
-            
-            <ul>
-              <li><h4 class="chapter_title">Algebra 1</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Pythagarium Therum</h4></li>
-              	<li><h4 class="lesson_title">Counting</h4></li>
-
-              	<li><h4 class="lesson_title">Equation Clues</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-
-              <li><h4 class="chapter_title">Geomtry</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Square</h4></li>
-              	<li><h4 class="lesson_title">Circle</h4></li>
-
-              	<li><h4 class="lesson_title">Triangle</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-            </ul>
-
-
-          </ul>
-
-
-          <ul class="list-unstyled subject_category">
-            <li><h4 class="course_title">History</h4></li>
-            
-            <ul>
-              <li><h4 class="chapter_title">Algebra 1</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Pythagarium Therum</h4></li>
-              	<li><h4 class="lesson_title">Counting</h4></li>
-
-              	<li><h4 class="lesson_title">Equation Clues</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-
-              <li><h4 class="chapter_title">Geomtry</h4></li>
-              
-              <ul>
-              	<li><h4 class="lesson_title">Square</h4></li>
-              	<li><h4 class="lesson_title">Circle</h4></li>
-
-              	<li><h4 class="lesson_title">Triangle</h4></li>
-
-              	<li><h4 class="lesson_title">&nbsp;</h4></li>
-                
-              </ul>
-            </ul>
-
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    
-    </div>
-  </div>
+								</ul>
+							</ul>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
 </div>
+
 
 
 
