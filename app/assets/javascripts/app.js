@@ -8,22 +8,32 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 		.state('home', {
 			url: '/home',
 			templateUrl: 'home/_home.html',
-			controller: 'MainCtrl',
-			resolve: {
-				curriculumPromise: ['curriculums', function(posts){
-					return posts.getAll();
-				}]
-			}
+			// controller: 'MainCtrl',
+			// resolve: {
+			// 	curriculumPromise: ['curriculums', function(curriculums){
+			// 		return curriculums.getAll();
+			// 	}]
+			// }
 		})
 		.state('curriculums', {
-			url: '/curriculums/{id}',
+			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
-			controller: 'curriculumsCtrl',
-			resolve: {
-				curriculum: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-					return curriculums.get($stateParams.id);
-				}]
-			}
+			// controller: 'curriculumsCtrl',
+			// resolve: {
+			// 	post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
+			// 		return curriculums.get($stateParams.id);
+			// 	}]
+			// }
+		})
+		.state('instructor_dash', {
+			url: '/instructor_dash',
+			templateUrl: 'dashboard/instructor_dash.html',
+			// controller: 'curriculumsCtrl',
+			// resolve: {
+			// 	post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
+			// 		return curriculums.get($stateParams.id);
+			// 	}]
+			// }
 		})
 		.state('login', {
 			url: '/login',
