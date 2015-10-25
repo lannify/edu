@@ -14,14 +14,16 @@ angular.module('edu')
 			var item_name = [];
 			var item_price = [];
 			var item_image = [];
+			var item_url = [];
 			return $http.get(target_url).success(function(res){
 				console.log(res);
 				item_name.push(res.product_composite_response.items[0].general_description);
 				item_price.push(res.product_composite_response.items[0].store_product[0].price.display_original_price);
 				item_image.push(res.product_composite_response.items[0].image.internal_primary_image_url);
+				item_url.push(res.product_composite_response.items[0].data_page_link);
 				console.log(item_name);
 				console.log(item_price);
-				o.supplies.push(item_name, item_price, item_image);
+				o.supplies.push(item_name, item_price, item_image, item_url);
 				// angular.copy(res, o.supplies);
 			});
 		};
