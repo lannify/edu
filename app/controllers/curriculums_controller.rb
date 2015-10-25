@@ -6,8 +6,8 @@ class CurriculumsController < ApplicationController
 	end
 
 	def create
-
-	    respond_with Curriculum.create(curriculum_params.merge(user_id: current_user.id))
+    respond_with Curriculum.create(curriculum_params.merge(user_id: current_user.id))
+  end
 
 	private
 	def curr_params
