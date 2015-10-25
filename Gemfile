@@ -34,3 +34,5 @@ gem 'hirb'
 gem 'wolfram-alpha'
 
 gem 'nokogiri'
+
+gem 'paperclip'

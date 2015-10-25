@@ -18,8 +18,24 @@
 
     </div>
   </div>
-
   <div class="instruct_table">
+
+    <h3>Supplies you'll need for this curriculum</h3>
+
+    <table class="table target_stuff">
+      <tr ng-repeat="supply in supplies">
+        <!-- <td><img src="{{supply.item_image}}"></td> -->
+        <td><h4><strong>{{supply.item_name}}</strong></h4></td>
+        <td><h4>${{supply.item_price}}</h4></td>
+        <!-- <td><h4><a href="{{supply.item_url}}">Get It</a></h4></td> -->
+
+      </tr>
+    </table>
+
+    <a type="button" href="#/supplies" class="btn btn-primary btn-lg button_red">Add supplies</a>
+  </div>
+
+  <div class="instruct_table" style="margin-top:100px">
 
     <h3>Subjects</h3>
     <hr>

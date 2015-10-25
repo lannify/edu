@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025012152) do
+ActiveRecord::Schema.define(version: 20151025142922) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -141,6 +141,22 @@ ActiveRecord::Schema.define(version: 20151025012152) do
   end
 
   add_index "subjects", ["curriculum_id"], name: "index_subjects_on_curriculum_id"
+
+  create_table "supplies", force: :cascade do |t|
+    t.string   "item_name"
+    t.decimal  "item_price"
+    t.string   "item_image"
+    t.string   "item_url"
+    t.integer  "curriculum_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "supplies", ["curriculum_id"], name: "index_supplies_on_curriculum_id"
 
   create_table "tests", force: :cascade do |t|
     t.string   "title"

@@ -22,7 +22,8 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 		.state('curriculum', {
 			url: '/curriculum',
-			templateUrl: 'curriculums/_curriculum.html'			
+			templateUrl: 'curriculums/_curriculum.html',
+			controller: 'suppliesCtrl'
 		})
 		// .state('curriculum', {
 		// 	url: '/curriculums/{id}',
@@ -46,9 +47,39 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			// 	    }
 		 //    }
 		})
+
+		.state('add_subject', {
+			url: '/add_subject',
+			templateUrl: 'subjects/_addSubject.html',
+			controller: 'subjectsCtrl'
+
+		})
+		.state('add_course', {
+			url: '/add_course',
+			templateUrl: 'courses/_addCourse.html',
+			controller: 'coursesCtrl'
+
+		})
+		.state('add_chapter', {
+			url: '/add_chapter',
+			templateUrl: 'chapters/_addChapter.html',
+			controller: 'chapterCtrl'
+
+		})
+		.state('add_lesson', {
+			url: '/add_lesson',
+			templateUrl: 'lessons/_addLesson.html',
+			controller: 'lessonsCtrl'
+
+		})
 		.state('lesson', {
 			url: '/lesson',
 			templateUrl: 'lessons/_lesson.html'			
+		})
+		.state('add_curriculums', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_add_curriculum.html',
+			
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
