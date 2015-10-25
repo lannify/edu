@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   root to: 'application#angular'
 
   resources :curriculums
+  resources :subjects
+  resources :courses
+  resources :chapters
+  resources :lessons
+
 
 
 end

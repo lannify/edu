@@ -25,8 +25,8 @@ angular.module('edu')
 			});
 		};
 
-		o.addComment = function(id, comment) {
-			return $http.post('/curriculums/' + id + '/comments.json', comment);
+		o.addSubject = function(id, subject) {
+			return $http.post('/curriculums/' + id + '/subjects.json', subject);
 		};
 
 		return o;

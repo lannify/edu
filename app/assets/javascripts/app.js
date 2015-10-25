@@ -1,4 +1,4 @@
-angular.module('edu', ['ui.router', 'templates', 'Devise'])
+angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 .config([
 	'$stateProvider',
 	'$urlRouterProvider',
@@ -7,10 +7,9 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: 'home/_home.html',
+			templateUrl: 'home/_home.html'
 		
 		})
-
 		.state('curriculums', {
 			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
@@ -25,11 +24,27 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			url: '/curriculum',
 			templateUrl: 'curriculums/_curriculum.html'			
 		})
+		// .state('curriculum', {
+		// 	url: '/curriculums/{id}',
+		// 	templateUrl: 'curriculums/_curriculums.html',
+		// 	controller: 'curriculumsCtrl',
+		// 	resolve: {
+		// 		post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
+		// 			return curriculums.get($stateParams.id);
+		// 		}]
+		// 	}
+		// })
 
 		.state('add_curriculum', {
 			url: '/add_curriculum',
 			templateUrl: 'curriculums/_addCurriculum.html',
 			controller: 'curriculumsCtrl'
+			// data: {
+		 //        permissions: {
+		 //            except: ['anonymous', 'student'],
+		 //            redirectTo: 'login'
+			// 	    }
+		 //    }
 		})
 		.state('lesson', {
 			url: '/lesson',
