@@ -33,7 +33,7 @@ angular.module('edu')
 				};
 				console.log(res);
 				p.item_name =res.product_composite_response.items[0].general_description;
-
+			
 				// item_name.push(res.product_composite_response.items[0].general_description);
 				p.item_price = res.product_composite_response.items[0].store_product[0].price.display_original_price;
 
