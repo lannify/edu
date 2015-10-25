@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Createculum</title>
+		<title>CurriccuLearn</title>
 		<%= stylesheet_link_tag    'application', media: 'all' %>
 		<%= javascript_include_tag 'application' %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body ng-app="edu">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-2">
+		
 
-				<div ng-include="'nav/_nav.html'" class="row"></div>
+			<div ng-include="'nav/_nav.html'" ></div>
 
 				<ui-view></ui-view>
 		
-			</div>
-		</div>	
+		
 
 
 
