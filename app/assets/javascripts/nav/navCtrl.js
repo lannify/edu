@@ -19,4 +19,4 @@ angular.module('edu')
 		$scope.$on('devise:logout', function (e, user){
 			$scope.user = {};
 		});
-	}]);
+}]);
