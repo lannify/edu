@@ -22,7 +22,8 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 		.state('curriculum', {
 			url: '/curriculum',
-			templateUrl: 'curriculums/_curriculum.html'			
+			templateUrl: 'curriculums/_curriculum.html',
+			controller: 'suppliesCtrl'
 		})
 		// .state('curriculum', {
 		// 	url: '/curriculums/{id}',

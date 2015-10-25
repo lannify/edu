@@ -1,6 +1,6 @@
 angular.module('edu')
 .controller('curriculumsCtrl', [
-'$scope', 'curriculums',
+'$scope', 'curriculums', 'supplies',
 	function($scope, curriculums){
 		$scope.curriculums = curriculums.curriculums;
 		$scope.addCurriculum = function(){			
@@ -11,6 +11,6 @@ angular.module('edu')
 			});		
 		    $scope.name = '';
 		    $scope.grade_level = '';
-	};
+		};
 		
 }]);
