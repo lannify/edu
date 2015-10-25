@@ -1,28 +1,15 @@
 
 <h1>Create a Curriculum</h1>
 
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Curriculum Title</label>
-    <input type="text" class="form-control" id="exampleInputText1" placeholder="Ex: My fithgrade awesome" name="title">
-  </div>
-  <div class="form-group">
-    <label>Teaching Style</label>
-    <select class="form-control" name="level">
-      <option>Lecture style</option>
-      <option>Montesori style</option>
-      <option>No textbook</option>
-      <option>Coopertive</option>
-      <option>Instructional</option>
-    </select>
-
-  </div>
-
+<form ng-submit="addCurriculum()"
+  style="margin-top:30px;">
+  <h3>Add a new curriculum</h3>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">What supplies will you need for this curriculum?</label>
-    <input type="text" class="form-control" id="exampleInputText1" placeholder="Ex: a journal" name="supplies">
+    <input type="text"
+    class="form-control"
+    placeholder="Name"
+    ng-model="name"></input>
   </div>
-
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-primary">Curriculum</button>
 </form>

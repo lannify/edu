@@ -15,6 +15,11 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			templateUrl: 'curriculums/_curriculums.html',
 			
 		})
+		.state('add_curriculums', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_add_curriculum.html',
+			
+		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
 			templateUrl: 'dashboard/instructor_dash.html',
