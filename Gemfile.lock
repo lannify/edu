@@ -160,6 +160,7 @@ DEPENDENCIES
   devise (~> 3.4.0)
   hirb
   jbuilder (~> 2.0)
+  nokogiri
   rails (= 4.2.0)
   responders (~> 2.0)
   sass-rails (~> 5.0)

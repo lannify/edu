@@ -59,6 +59,11 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 					$state.go('home');
 				})
 			}]
+		})
+		.state('supplies', {
+			url: '/supplies',
+			templateUrl: 'supplies/_supplies.html',
+			controller: 'suppliesCtrl'
 		});
 		
 		$urlRouterProvider.otherwise('home');
