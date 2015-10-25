@@ -54,6 +54,11 @@ h1 span {
 
 }
 
+h2 span.lesson_section {
+	font-family: 'Gotham-italic';
+
+}
+
 .btn-primary {
 	margin-top: 10px;
 	border: 0px;
@@ -393,3 +398,110 @@ hr {
 }
 
 .subject_body_content a.margin_clear {margin-right: 0%; text-align: right}
+
+
+.sidebar_lesson {
+	height: 100vh;
+	background: #3C3739;
+	width: 15%;
+	position: fixed;
+	margin-top: 76px; 
+}
+
+.container_lesson {
+	margin-left: 15%;
+	max-width: 85%;
+	padding-bottom: 150px;
+}
+
+.lesson_box {
+	width: 80%; 
+	background: #fff; 
+	margin: 0 auto; 
+	border: 1px solid #d1d0d2;
+	margin-top: 120px;
+
+	padding: 30px 50px 100px;
+	max-width: 1000px;
+
+	overflow: visible;
+
+}
+
+.lesson_box p {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+.lesson_box img {
+
+	margin-top: 20px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.prev_button {
+	
+	margin: 0;
+	float: left;
+	padding-left: 0;
+	
+	
+}
+
+.next_button {
+	margin: 0;
+	float: right;
+
+
+}
+.next_button a{
+	margin: 0;
+	float: right;
+}
+
+.bottom_buttons {
+
+	padding-top: 40px;
+}
+
+.lesson_course_name {
+	width: 100%;
+	padding: 15px;
+	background: #9BBF75;
+	font-family: 'Gotham-bold';
+	color: #fff;
+}
+
+
+
+.lesson_chapter_name {
+	width: 100%;
+	padding: 15px;
+	background: #3C3739;
+	font-family: 'Gotham-bold-italic';
+	color: #fff;
+	border-bottom: 1px solid #514D4D;
+}
+
+.lesson_chapter_name:hover {
+
+	background: #E55C65;
+	cursor:pointer;
+}
+
+.lesson_lesson_list {
+	width: 100%;
+	padding: 17px;
+	background: #514D4D;
+	font-family: 'Gotham-book';
+	color: #fff;
+	border-bottom: 1px solid #494446;
+}
+
+.lesson_lesson_list ul li:hover {
+
+	color: #9BBF75;
+	cursor: pointer;
+
+}

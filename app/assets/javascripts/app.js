@@ -25,10 +25,15 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			url: '/curriculum',
 			templateUrl: 'curriculums/_curriculum.html'			
 		})
+
 		.state('add_curriculum', {
 			url: '/add_curriculum',
 			templateUrl: 'curriculums/_addCurriculum.html',
 			controller: 'curriculumsCtrl'
+		})
+		.state('lesson', {
+			url: '/lesson',
+			templateUrl: 'lessons/_lesson.html'			
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
@@ -59,6 +64,11 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 					$state.go('home');
 				})
 			}]
+		})
+		.state('supplies', {
+			url: '/supplies',
+			templateUrl: 'supplies/_supplies.html',
+			controller: 'suppliesCtrl'
 		});
 		
 		$urlRouterProvider.otherwise('home');
