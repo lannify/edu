@@ -49,15 +49,13 @@ body {
 }
 
 .btn-primary {
-	margin-top: 30px;
+	margin-top: 10px;
 	border: 0px;
 	border-radius: 2px;
 	background: #E55C65;
 }
 .btn-primary:hover {
-	margin-top: 30px;
-	border: 0px;
-	border-radius: 2px;
+
 	background: #BC535E;
 }
 
@@ -227,7 +225,7 @@ body {
 	max-width: 200px;
 }
 
-.container {padding-top: 120px; padding-bottom: 50px;}
+.container {padding-top: 120px; padding-bottom: 100px;}
 
 .dashboard_top_buttons a.btn-primary {
 	display:block; 
@@ -250,14 +248,82 @@ body {
 	background-color: #9BBF75
 }
 
-.table{
+.student_table {
+margin-top: 50px;
 
+}
+
+.instruct_table{
 	margin-top: 50px;
+}
+
+.table tr th {
+	padding-left: 0px;
+	border-top: 0px !important;
+}
+
+.instruct_table h3 span {
+	font-family: 'Gotham-bold';
+}
+
+hr {
+
+	border-color: #d1d0d2;
+}
+
+.student_subject_box {
+
+
 }
 
 
 
-.table tr th {
+.student_subject_box .col-md-6{
+	max-width: 47%;
+	border: 1px solid #d1d0d2;
+	background-color: #fff;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0 auto;
+	border-radius: 4px;
+	margin-top: 30px;
 
-	border-top: 0px !important
+
+}
+
+.student_subject_box .col-md-6:nth-child(odd){
+	max-width: 47%;
+	margin-right: 6%;
+	background-color: #fff;
+	border-radius: 3px;
+
+
+}
+
+.student_subject_box .col-md-6 .page-header{
+	width: 100%;
+	text-align: center;
+	border-radius: 4px 4px 0px 0px ;
+	background-color: #252A34;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.student_subject_box .col-md-6 .page-header h3{
+	font-family: 'Gotham-bold';
+	padding-top: 10px;
+	margin: 0 auto;
+}
+
+.subject_body_content {
+	padding: 20px 20px 35px 20px;
+}
+
+
+.subject_body_content a{
+	width: 46.5%;
+}
+
+.subject_body_content a:nth-child(odd){
+	margin-right: 6%;
 }
