@@ -1,6 +1,6 @@
 angular.module('edu')
 
-.factory('curriculum', ['$http',
+.factory('curriculums', ['$http',
 	function($http){
 
 		var o = {
@@ -14,7 +14,7 @@ angular.module('edu')
 		};
 
 		o.create = function(curriculum) {
-			return $http.curriculum('/curriculums.json', curriculum).success(function(data){
+			return $http.post('/curriculums.json', curriculum).success(function(data){
 				o.curriculums.push(data);
 			});
 		};
@@ -25,8 +25,8 @@ angular.module('edu')
 			});
 		};
 
-		o.addComment = function(id, comment) {
-			return $http.curriculum('/curriculums/' + id + '/comments.json', comment);
+		o.addSubject = function(id, subject) {
+			return $http.post('/curriculums/' + id + '/subjects.json', subject);
 		};
 
 		return o;
