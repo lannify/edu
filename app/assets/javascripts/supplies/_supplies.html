@@ -13,14 +13,11 @@
           </div>         
           <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add!">
         </form>
-		Hello World
-  
-{{supplies.item_name}}
         </div>
 		
-		<!--  <div ng-repeat="supply in supplies ">
-      		{{supply.item_name}}
-    	</div> -->
+		 <div ng-repeat="supply in supplies track by $index">
+      		{{supply}}
+    	</div>
   </div>
 
 </div> 
