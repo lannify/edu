@@ -210,6 +210,54 @@ body {
 	margin-bottom: 20px !important;
 }
 
+.profile_box {
+	display: inline-block;
+	vertical-align: top;
+}
+.profile_box h2 {	
+	padding-bottom: 10px;
+}
+
+.profile_box h4 span{
+	font-family: 'Gotham-bold';
+}
+
+.profile_image {
+	margin-right: 25px;
+	max-width: 200px;
+}
+
+.container {padding-top: 120px; padding-bottom: 50px;}
+
+.dashboard_top_buttons a.btn-primary {
+	display:block; 
+	clear:both;
+	width: 240px;
+	padding: 15px 15px;
+	float: right;
+	vertical-align: top;
+	margin-top: 15px;
+	margin-bottom: 5px
+}
+
+.button_blue {
+	background-color: #252A34;
+
+}
+
+.button_green {
+
+	background-color: #9BBF75
+}
+
+.table{
+
+	margin-top: 50px;
+}
 
 
 
+.table tr th {
+
+	border-top: 0px !important
+}

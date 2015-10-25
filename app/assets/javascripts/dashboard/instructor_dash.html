@@ -1,54 +1,71 @@
-<h1>Instructor:</h1>
-<h2>Tammy Tam Tam</h2>
-{{user.user_level}}
-<button>Add new curriculum</button>
-<button>Add student</button>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 profile_box">
+			
+			<img class="profile_image" src="assets/allison.jpg" >
+			
+			<div class="profile_box">
+				<h2>Allison Dreher</h2>
+				<h4><span>Instructor{{user.user_level}}</span></h4>
+				<h4><span>2</span> Students</h4>
+				<h4><span>3</span> Curriculum</h4>
+
+			</div>
+
+		</div>
+		<div class="col-md-6 dashboard_top_buttons">
+			
+			<a type="button" href="#/register" class="btn btn-primary btn-lg button_blue">Add new curriculum</a>
+			<a type="button" href="#/register" class="btn btn-primary btn-lg button_green">Add new student</a>
+
+		</div>
+	</div>
+		
+
+	<table class="table" >
+		<tr>
+			<th><h3>My Students</h3></th>
+			<th><h3>Curriculum</h3></th>
+			<th><h3>Progress</h3></th>
+			<th><h3>Action</h3></th>
+
+		</tr>
+		<tr>
+			<td><a href="#">Nick</a></td>
+			<td>My curriculum</td>
+			<td>100%</td>
+			<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
+
+		</tr>
+		<tr>
+			<td><a href="#">Nick</a></td>
+			<td>My curriculum</td>
+			<td>30%</td>
+			<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
+		</tr>
+	</table>
 
 
-<table class="table table-hover" style="margin-top: 30px;">
-	<tr>
-		<th>Student</th>
-		<th>Curriculum</th>
-		<th>Progress</th>
-		<th>Action</th>
+	<table class="table" >
+		<tr>
+			<th><h3>My Curriculums</h3></th>
+			<th><h3>Students</h3></th>
+			<th><h3>Action</h3></th>
 
-	</tr>
-	<tr>
-		<td><a href="#">Nick</a></td>
-		<td>My curriculum</td>
-		<td>100%</td>
-		<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
+		</tr>
+		<tr>
+			<td>Mike's 5th grade</td>
+			<td>3</td>
 
-	</tr>
-	<tr>
-		<td><a href="#">Nick</a></td>
-		<td>My curriculum</td>
-		<td>30%</td>
-		<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
-	</tr>
-</table>
+			<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
 
+		</tr>
+		<tr>
+			<td>Bills 3rd Grade</td>
+			<td>5</td>
+		
+			<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
+		</tr>
+	</table>
 
-<table class="table table-hover" style="margin-top: 30px;">
-	<tr>
-		<th>Curriculums</th>
-		<th>Number Using</th>
-
-		<th>Actions</th>
-
-	</tr>
-	<tr>
-		<td>Mike's 5th grade</td>
-		<td>3</td>
-
-		<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
-
-	</tr>
-	<tr>
-		<td>Bills 3rd Grade</td>
-		<td>5</td>
-	
-		<td><a href="#">Remove</a> / <a href="#">Edit</a></td>
-	</tr>
-</table>
-
+</div>
