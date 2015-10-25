@@ -1,7 +1,27 @@
-<!--  <div ng-repeat="curriculum in curriculums ">               
-        {{curriculum.name}}
-        {{curriculum.user_id}}            
- </div> -->
+<hr> 
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+ <div ng-repeat="curriculum in curriculums">
+ 	{{curriculum.name}}
+ 	<div ng-repeat="subject in curriculum.subjects">
+ 		{{subject.title}}
+ 		<div ng-repeat="course in subject.courses">
+ 			{{course.title}}
+ 			<div ng-repeat="chapter in course.chapters">
+ 				{{chapter.title}}
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
 
 
 <div class="container">
