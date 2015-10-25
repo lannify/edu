@@ -10,10 +10,25 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			templateUrl: 'home/_home.html',
 		
 		})
+
 		.state('curriculums', {
 			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
-			
+			controller: 'curriculumsCtrl',
+			resolve: {
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
+				}]
+			}			
+		})
+		.state('curriculum', {
+			url: '/curriculum',
+			templateUrl: 'curriculums/_curriculum.html'			
+		})
+		.state('add_curriculum', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_addCurriculum.html',
+			controller: 'curriculumsCtrl'
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
