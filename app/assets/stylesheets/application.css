@@ -542,3 +542,14 @@ hr {
 .table tr td img {
 	width: 80px;
 }
+
+.target_logo {
+	display: block;
+	margin: 0 auto;
+	width:80px;
+	margin-top: -20px
+}
+
+.target_text {
+	text-align: center;
+}

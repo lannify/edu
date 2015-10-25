@@ -3,11 +3,18 @@
     <div class="form_container">
         <div class="page-header">
           <h2>Add a Supply</h2>
+
         </div>
 
       
         <form ng-submit="itemLookup()">
           <div class="input-group">
+            <a href="http://www.target.com/" target="_blank"><img class="target_logo"  src="assets/target.png"></a>
+            <div class="target_text">
+                <h4>Head to <a href="http://www.target.com/" target="_blank">Target.com</a> and add the product id in the field below.</h4>
+                 <br>
+            </div>
+           
             <label for="exampleInputEmail1">Item Lookup</label>
             <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="057-10-1355" ng-model="item_id">
           </div>         
