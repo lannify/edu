@@ -505,3 +505,31 @@ hr {
 	cursor: pointer;
 
 }
+
+.target_stuff tr {
+	height: 100px;
+	padding-bottom: 40px;
+	
+}
+
+.target_stuff tr td {
+	width: 140px;
+	padding-top: 25px !important;
+	display: inline-block;
+	vertical-align: center;
+
+}
+
+
+.target_stuff tr td:first-child {
+
+	padding-top: 10px !important;
+
+
+}
+
+
+
+.table tr td img {
+	width: 80px;
+}
