@@ -4,12 +4,19 @@ angular.module('edu')
 	function($http){
 
 		var o = {
-			curriculums: []
+			curriculums: [],
+			supplies: []
 		};
 
 		o.getAll = function() {
 			return $http.get('/curriculums.json').success(function(data){
 				angular.copy(data, o.curriculums);
+			});
+		};
+
+		o.getSupplies = function() {
+			return $http.get('/supplies.json').success(function(data){
+				angular.copy(data, o.supplies);
 			});
 		};
 
