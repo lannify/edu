@@ -1,0 +1,24 @@
+<div class="green_background">
+  <div class="container">
+    <div class="form_container">
+        <div class="page-header">
+          <h2>Add a Supply</h2>
+        </div>
+
+      
+        <form ng-submit="itemLookup()">
+          <div class="input-group">
+            <label for="exampleInputEmail1">Item Lookup</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="057-10-1355" ng-model="item_id">
+          </div>         
+          <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add!">
+        </form>
+        </div>
+		
+		 <div ng-repeat="supply in supplies track by $index">
+      		{{supply}}
+    	</div>
+  </div>
+
+</div> 
+  
