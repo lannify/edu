@@ -25,6 +25,16 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			// 	}]
 			// }
 		})
+		.state('instructor_dash', {
+			url: '/instructor_dash',
+			templateUrl: 'dashboard/instructor_dash.html',
+			// controller: 'curriculumsCtrl',
+			// resolve: {
+			// 	post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
+			// 		return curriculums.get($stateParams.id);
+			// 	}]
+			// }
+		})
 		.state('login', {
 			url: '/login',
 			templateUrl: 'auth/_login.html',
