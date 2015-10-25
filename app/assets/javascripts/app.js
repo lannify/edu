@@ -8,32 +8,22 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 		.state('home', {
 			url: '/home',
 			templateUrl: 'home/_home.html',
-			// controller: 'MainCtrl',
-			// resolve: {
-			// 	curriculumPromise: ['curriculums', function(curriculums){
-			// 		return curriculums.getAll();
-			// 	}]
-			// }
+		
 		})
 		.state('curriculums', {
 			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
-			// controller: 'curriculumsCtrl',
-			// resolve: {
-			// 	post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-			// 		return curriculums.get($stateParams.id);
-			// 	}]
-			// }
+			
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
 			templateUrl: 'dashboard/instructor_dash.html',
-			// controller: 'curriculumsCtrl',
-			// resolve: {
-			// 	post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-			// 		return curriculums.get($stateParams.id);
-			// 	}]
-			// }
+			
+		})
+		.state('student_dash', {
+			url: '/student_dash',
+			templateUrl: 'dashboard/student_dash.html',
+			
 		})
 		.state('login', {
 			url: '/login',
@@ -56,6 +46,5 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			}]
 		});
 		
-
 		$urlRouterProvider.otherwise('home');
 	}]);
