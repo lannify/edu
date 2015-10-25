@@ -1,0 +1,22 @@
+
+<h1>Create a Curriculum</h1>
+
+<form ng-submit="addCurriculum()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Curriculum Name</label>
+    <input type="text" class="form-control" id="exampleInputText1" placeholder="Ex: My fithgrade awesome" ng-model="name">
+  </div>
+  <div class="form-group">
+    <label>Grade level</label>
+    <select class="form-control" ng-model="grade_level">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+  </div>
+
+  <input type="submit" class="btn btn-default" value="submits">
+</form>
