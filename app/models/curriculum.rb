@@ -4,6 +4,6 @@ class Curriculum < ActiveRecord::Base
   has_many :subjects
 
 	def as_json(options = {})
-    super(options.merge(include: [:user, :category]))
+    super(options.merge(include: [:user, :subjects]))
 	end
 end
