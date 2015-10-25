@@ -48,6 +48,12 @@ body {
 	font-family: 'Gotham-light';
 }
 
+h1 span {
+	color: #252A34;
+	font-family: 'Gotham-bold';
+
+}
+
 .btn-primary {
 	margin-top: 10px;
 	border: 0px;
@@ -248,6 +254,22 @@ body {
 	background-color: #9BBF75
 }
 
+.button_green_text {
+
+	color: #9BBF75
+}
+
+.button_blue_text {
+
+	color: #252A34
+}
+
+.button_red_text {
+
+	color: #E55C65
+}
+
+
 .student_table {
 margin-top: 50px;
 
@@ -271,14 +293,9 @@ hr {
 	border-color: #d1d0d2;
 }
 
-.student_subject_box {
 
 
-}
-
-
-
-.student_subject_box .col-md-6{
+.student_subject_box .col-md-6, .curriculum_subject_box .col-md-6{
 	max-width: 47%;
 	border: 1px solid #d1d0d2;
 	background-color: #fff;
@@ -291,7 +308,7 @@ hr {
 
 }
 
-.student_subject_box .col-md-6:nth-child(odd){
+.student_subject_box .col-md-6:nth-child(odd), .curriculum_subject_box .col-md-6:nth-child(odd){
 	max-width: 47%;
 	margin-right: 6%;
 	background-color: #fff;
@@ -300,7 +317,7 @@ hr {
 
 }
 
-.student_subject_box .col-md-6 .page-header{
+.student_subject_box .col-md-6 .page-header, .curriculum_subject_box .col-md-6 .page-header{
 	width: 100%;
 	text-align: center;
 	border-radius: 4px 4px 0px 0px ;
@@ -309,7 +326,7 @@ hr {
 	margin: 0 auto;
 }
 
-.student_subject_box .col-md-6 .page-header h3{
+.student_subject_box .col-md-6 .page-header h3, .curriculum_subject_box .col-md-6 .page-header h3{
 	font-family: 'Gotham-bold';
 	padding-top: 10px;
 	margin: 0 auto;
@@ -327,3 +344,52 @@ hr {
 .subject_body_content a:nth-child(odd){
 	margin-right: 6%;
 }
+
+.course_title {
+	text-transform: uppercase;
+	font-family: 'Gotham-bold';
+	color: #577337;
+	display: inline-block;
+	margin-right: 20px;
+	padding-bottom: 10px;
+}
+
+
+.chapter_title {
+	font-family: 'Gotham-book';
+	color: #666;
+	border-bottom: 1px solid #999;
+	display: inline;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.chapter_title h4{
+
+	margin-right: 20px;
+}
+
+.table_no_line tr td{
+
+	border-top: 0px #fff !important;
+	padding: 0px !important;
+}
+
+
+.table_no_line tr td:last-child{
+
+	text-align: right;
+}
+
+.table_no_line tr td h4
+ {
+ 	margin-top: 10px;
+    margin-bottom: 0px;}
+
+.subject_category {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d1d0d2;
+}
+
+.subject_body_content a.margin_clear {margin-right: 0%; text-align: right}
