@@ -8,7 +8,11 @@
   </div>
   <div class="input-group">
     <input type="text" class="form-control" placeholder="Name" ng-model="user.name">
-    <input type="hidden" ng-model="user.user_level" value="4">
+    <select ng-model="user.user_level">
+        <option value ="2">Instructor</option>
+        <option value ="3">Student</option>
+        <option value ="4">Member</option>
+    </select>
   </div>
   <div class="input-group">
     <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
