@@ -8,22 +8,37 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 		.state('home', {
 			url: '/home',
 			templateUrl: 'home/_home.html',
-			controller: 'MainCtrl',
-			resolve: {
-				curriculumPromise: ['curriculums', function(posts){
-					return posts.getAll();
-				}]
-			}
+		
 		})
+
 		.state('curriculums', {
-			url: '/curriculums/{id}',
+			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
 			controller: 'curriculumsCtrl',
 			resolve: {
-				curriculum: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-					return curriculums.get($stateParams.id);
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
 				}]
-			}
+			}			
+		})
+		.state('curriculum', {
+			url: '/curriculum',
+			templateUrl: 'curriculums/_curriculum.html'			
+		})
+		.state('add_curriculum', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_addCurriculum.html',
+			controller: 'curriculumsCtrl'
+		})
+		.state('instructor_dash', {
+			url: '/instructor_dash',
+			templateUrl: 'dashboard/instructor_dash.html',
+			
+		})
+		.state('student_dash', {
+			url: '/student_dash',
+			templateUrl: 'dashboard/student_dash.html',
+			
 		})
 		.state('login', {
 			url: '/login',
@@ -46,6 +61,5 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 			}]
 		});
 		
-
 		$urlRouterProvider.otherwise('home');
 	}]);

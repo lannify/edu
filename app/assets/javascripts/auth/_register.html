@@ -1,0 +1,32 @@
+<div class="green_background">
+  <div class="container">
+    <div class="form_container">
+        <div class="page-header">
+          <h2>Register</h2>
+        </div>
+
+      <form ng-submit="register()">
+        <div class="input-group">
+          <input type="email" class="form-control input_style" placeholder="Email" ng-model="user.email">
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control input_style" placeholder="Name" ng-model="user.name">
+          <select ng-model="user.user_level" class="form-control input_style">
+              <option value ="" disabled>Choose User Level</option>
+              <option value ="2" >Instructor</option>
+              <option value ="3">Student</option>
+              <option value ="4">Member</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input type="password" class="form-control input_style" placeholder="Password" ng-model="user.password">
+        </div>
+        <input type="submit"class="btn btn-primary btn-lg btn-block" value="Let's get started!">
+      </form>
+
+        </div>
+
+  </div>
+
+</div> 
+  

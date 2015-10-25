@@ -14,3 +14,316 @@
  *= require_tree .
  *= require_self
  */
+
+
+@font-face {
+	font-family: 'Gotham-book';
+	src: url('fonts/GOTHAM-MEDIUM.TTF');
+
+}
+
+@font-face {
+	font-family: 'Gotham-bold';
+	src: url('fonts/GOTHAM-BOLD.TTF');
+}
+
+@font-face {
+	font-family: 'Gotham-bold-italic';
+	src: url('fonts/GOTHAM-BOLDITALIC.TTF');
+}
+
+@font-face {
+	font-family: 'Gotham-italic';
+	src: url('fonts/GOTHAM-BOOKITALIC_0.OTF');
+}
+
+@font-face {
+	font-family: 'Gotham-light';
+	src: url('fonts/GOTHAM-LIGHT_0.OTF');
+}
+
+
+body {
+
+	font-family: 'Gotham-light';
+}
+
+.btn-primary {
+	margin-top: 10px;
+	border: 0px;
+	border-radius: 2px;
+	background: #E55C65;
+}
+.btn-primary:hover {
+
+	background: #BC535E;
+}
+
+
+.navbar-nav {
+	display:block;
+	width: 100%;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	background: #fff;
+	margin: 0 auto;
+	padding-left: 2%;
+	padding-right: 3%;
+	position: fixed;
+	z-index: 100;
+
+}
+
+.navbar-collapse {
+
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.main_logo {
+	margin-right: 40px;
+	font-family: 'Gotham-bold';
+}
+.main_logo h2 a{
+	color: #9BBF75;
+}
+
+.blue_color_text {
+	color: #252A34;
+}
+
+.navbar-nav .nav_elements {
+	float: right;
+	margin-top: 25px;
+}
+
+.navbar-nav .nav_elements li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+
+.navbar-nav .nav_elements li a {
+	color: #252A34
+}
+
+.navbar-nav .nav_elements li a:hover {
+	color: #9BBF75
+}
+
+.container {
+	padding-top: 80px;
+}
+
+.home_banner {
+	padding-top: 80px;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #9BBF75
+}
+
+.home_main {
+	padding-top: 7%;
+}
+
+
+.home_main h1{
+	font-size: 50px;
+	font-family: 'Gotham-bold';
+	color: #fff;
+}
+
+.home_main h3{
+
+	font-family: 'Gotham-light';
+	color: #fff;
+}
+
+
+.home_main .btn-primary{
+	margin-top: 30px;
+	background-color: #fff;
+	color: #9BBF75;
+	border: 0px;
+	border-radius: 2px;
+	padding: 15px 40px;
+	font-family: 'Gotham-book';
+}
+
+
+.home_main .btn-primary:hover{
+	margin-top: 30px;
+	background-color: #252A34;
+	color: #fff;
+	border: 0px;
+	border-radius: 2px;
+	padding: 15px 40px;
+	font-family: 'Gotham-book';
+}
+.col-md-6 img {
+	width: 100%;
+}
+
+.green_background {
+
+	min-height: 100vh;
+	background-color: #9BBF75
+}
+
+.form_container {
+	margin: 0 auto;
+	margin-top: 30px;
+	max-width: 400px;
+	background: #fff;
+	border-radius: 4px;
+
+}
+
+.form_container .page-header{
+	width: 100%;
+	text-align: center;
+	border-radius: 4px 4px 0px 0px ;
+	background-color: #252A34;
+	color: #fff;
+}
+
+.form_container .page-header h2{
+	font-family: 'Gotham-bold';
+	padding-top: 20px;
+}
+
+
+.form_container form{
+
+	padding: 20px;
+}
+
+.input-group {
+	display: block;
+	
+}
+
+.input_style{
+	height: 40px;
+	margin-bottom: 20px !important;
+}
+
+.profile_box {
+	display: inline-block;
+	vertical-align: top;
+}
+.profile_box h2 {	
+	padding-bottom: 10px;
+}
+
+.profile_box h4 span{
+	font-family: 'Gotham-bold';
+}
+
+.profile_image {
+	margin-right: 25px;
+	max-width: 200px;
+}
+
+.container {padding-top: 120px; padding-bottom: 100px;}
+
+.dashboard_top_buttons a.btn-primary {
+	display:block; 
+	clear:both;
+	width: 240px;
+	padding: 15px 15px;
+	float: right;
+	vertical-align: top;
+	margin-top: 15px;
+	margin-bottom: 5px
+}
+
+.button_blue {
+	background-color: #252A34;
+
+}
+
+.button_green {
+
+	background-color: #9BBF75
+}
+
+.student_table {
+margin-top: 50px;
+
+}
+
+.instruct_table{
+	margin-top: 50px;
+}
+
+.table tr th {
+	padding-left: 0px;
+	border-top: 0px !important;
+}
+
+.instruct_table h3 span {
+	font-family: 'Gotham-bold';
+}
+
+hr {
+
+	border-color: #d1d0d2;
+}
+
+.student_subject_box {
+
+
+}
+
+
+
+.student_subject_box .col-md-6{
+	max-width: 47%;
+	border: 1px solid #d1d0d2;
+	background-color: #fff;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0 auto;
+	border-radius: 4px;
+	margin-top: 30px;
+
+
+}
+
+.student_subject_box .col-md-6:nth-child(odd){
+	max-width: 47%;
+	margin-right: 6%;
+	background-color: #fff;
+	border-radius: 3px;
+
+
+}
+
+.student_subject_box .col-md-6 .page-header{
+	width: 100%;
+	text-align: center;
+	border-radius: 4px 4px 0px 0px ;
+	background-color: #252A34;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.student_subject_box .col-md-6 .page-header h3{
+	font-family: 'Gotham-bold';
+	padding-top: 10px;
+	margin: 0 auto;
+}
+
+.subject_body_content {
+	padding: 20px 20px 35px 20px;
+}
+
+
+.subject_body_content a{
+	width: 46.5%;
+}
+
+.subject_body_content a:nth-child(odd){
+	margin-right: 6%;
+}
