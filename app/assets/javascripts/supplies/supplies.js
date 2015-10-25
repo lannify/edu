@@ -13,6 +13,9 @@ angular.module('edu')
 			console.log(target_url);
 			return $http.get(target_url).success(function(res){
 				console.log(res);
+				var item_name = res.product_composite_response.items[0].general_description;
+				console.log(item_name);
+				o.supplies.push(item_name);
 				// angular.copy(res, o.supplies);
 			});
 		};
