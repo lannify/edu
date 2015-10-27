@@ -8,11 +8,14 @@
       
         <form ng-submit="addSubject()">
           <div class="input-group">
-            <label for="exampleInputEmail1">Subject Name</label>
-            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Math" ng-model="subject">
+            <label for="exampleInputEmail1">Subject Title</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Math" ng-model="title">
           </div>
-        
-         
+           <div class="input-group">
+            <label for="exampleInputEmail1">Subject Description</label>
+            <textarea class="form-control input_style" id="exampleInputText1" placeholder="Beginning Algebra for special Adults" ng-model="description"></textarea>
+            <input type="hidden" ng-model = "curriculum_id" value="">
+          </div>        
           <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add Subject!">
         </form>
 

@@ -23,7 +23,12 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('curriculum', {
 			url: '/curriculum',
 			templateUrl: 'curriculums/_curriculum.html',
-			controller: 'suppliesCtrl'
+			controller: 'curriculumsCtrl',
+			resolve: {
+				postPromise: ['supplies', function(supplies){
+					return supplies.getAll();
+				}]
+			}		
 		})
 		// .state('curriculum', {
 		// 	url: '/curriculums/{id}',
@@ -118,4 +123,13 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		});
 		
 		$urlRouterProvider.otherwise('home');
-	}]);
+	}],
+	['$httpProvider', function($httpProvider) {
+
+        $httpProvider.defaults.useXDomain = true;
+
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+    }
+
+]);

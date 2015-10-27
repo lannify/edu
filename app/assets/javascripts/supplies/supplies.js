@@ -3,15 +3,22 @@ angular.module('edu')
 .factory('supplies', ['$http',
 	function($http){
 
-		// var o = {
-		// 	supplies: []
-		// };
-
 		var o = {
-			item_name: "",
-			item_price: 0,
-			item_image: "",
-			item_url: ""
+			supplies: []
+		};
+
+		// var o = {
+		// 	item_name: "",
+		// 	item_price: 0,
+		// 	item_image: "",
+		// 	item_url: ""
+		// };
+		o.getAll = function() {
+			return $http.get('/supplies.json').success(function(data){
+				
+				angular.copy(data, o.supplies);
+				console.log(o);
+			});
 		};
 
 		o.itemLookup = function(item_id) {
@@ -23,7 +30,7 @@ angular.module('edu')
 			// var item_image = [];
 			// var item_url = [];
 
-			var success = $http.get(target_url).success(function(res){
+			return $http.get(target_url).success(function(res){
 
 				var p = {
 					item_name: "",
@@ -33,7 +40,7 @@ angular.module('edu')
 				};
 				console.log(res);
 				p.item_name =res.product_composite_response.items[0].general_description;
-
+			
 				// item_name.push(res.product_composite_response.items[0].general_description);
 				p.item_price = res.product_composite_response.items[0].store_product[0].price.display_original_price;
 
@@ -51,8 +58,6 @@ angular.module('edu')
 				//rails controller
 				$http.post('/supplies.json', p);
 			});
-
-			return success;
 		};
 
 		return o;
