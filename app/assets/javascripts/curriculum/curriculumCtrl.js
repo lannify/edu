@@ -1,14 +1,14 @@
 angular.module('edu')
-.controller('curriculumsCtrl', [
-'$scope', 'curriculums', 'supplies', 
-	function($scope, curriculums, supplies){
+.controller('curriculumCtrl', [
+'$scope', 'curriculum', 'supplies', 
+	function($scope, curriculum, supplies){
 
-		$scope.curriculums = curriculums.curriculums;		
-		console.log(curriculums);
+		$scope.curriculum = curriculum.curriculum;
+		console.log(curriculum);
 		$scope.supplies = supplies.supplies;
 		$scope.addCurriculum = function(){			
 			 if(!$scope.name || $scope.name === '') { return; }
-			 curriculums.create({
+			 curriculum.create({
 			    name: $scope.name,	
 			    grade_level: $scope.grade_level	  
 			});		

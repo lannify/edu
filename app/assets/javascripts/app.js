@@ -20,23 +20,24 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				}]
 			}			
 		})
+		// .state('curriculum', {
+		// 	url: '/curriculum',
+		// 	templateUrl: 'curriculums/_curriculum.html',
+		// 	controller: 'curriculumsCtrl',
+		// 	resolve: {
+		// 		postPromise: ['supplies', function(supplies){
+		// 			return supplies.getAll();
+		// 		}]
+		// 	}		
+		// })
 		.state('curriculum', {
-			url: '/curriculum',
-			templateUrl: 'curriculums/_curriculum.html',
-			controller: 'curriculumsCtrl',
-			resolve: {
-				postPromise: ['supplies', function(supplies){
-					return supplies.getAll();
-				}]
-			}		
-		})
-		.state('curriculum_page', {
 			url: '/curriculums/{id}',
-			templateUrl: 'curriculums/_curriculum.html',
-			controller: 'curriculumsCtrl',
+			templateUrl: 'curriculum/_curriculum.html',
+			controller: 'curriculumCtrl',
 			resolve: {
-				post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-					return curriculums.get($stateParams.id);
+				post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
+		
+					return curriculum.get($stateParams.id);
 				}]
 			}
 		})

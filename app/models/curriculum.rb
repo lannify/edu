@@ -14,7 +14,10 @@ class Curriculum < ActiveRecord::Base
 		    				only: [:title, :id],
 		    				include: [
 		    					chapters: {
-		    					only: [:title, :id]
-	    					}]}]}]}))
+		    					only: [:title, :id],
+			    					include: [
+			    					lessons: {
+			    					only: [:title, :id]
+	    				}]	}]}]}]}))
 	end
 end
