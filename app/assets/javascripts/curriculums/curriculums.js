@@ -28,6 +28,7 @@ angular.module('edu')
 
 		o.get = function(id) {
 			return $http.get('/curriculums/' + id + '.json').then(function(res){
+				console.log(res.data);
 				return res.data;
 			});
 		};
@@ -38,4 +39,4 @@ angular.module('edu')
 
 		return o;
 	}
-	]);
+]);

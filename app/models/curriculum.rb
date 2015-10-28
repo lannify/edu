@@ -5,16 +5,16 @@ class Curriculum < ActiveRecord::Base
 
 	def as_json(options = {})
     	super(options.merge({
-    		only: [:name],
+    		only: [:name, :id],
     		include: [:user,
 	    		subjects: {
-	    			only: [:title],
+	    			only: [:title, :id],
 	    			include: [
 	    				courses: {
-		    				only: [:title],
+		    				only: [:title, :id],
 		    				include: [
 		    					chapters: {
-		    					only: [:title]
+		    					only: [:title, :id]
 	    					}]}]}]}))
 	end
 end

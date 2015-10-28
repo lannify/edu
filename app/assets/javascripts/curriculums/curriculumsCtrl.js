@@ -3,6 +3,7 @@ angular.module('edu')
 '$scope', 'curriculums', 'supplies',
 	function($scope, curriculums, supplies){
 		$scope.curriculums = curriculums.curriculums;
+		// $scope.curriculum = curriculums.curriculum;
 		$scope.supplies = supplies.supplies;
 		$scope.addCurriculum = function(){			
 			 if(!$scope.name || $scope.name === '') { return; }

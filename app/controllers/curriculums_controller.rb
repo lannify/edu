@@ -6,8 +6,13 @@ class CurriculumsController < ApplicationController
 	end
 
 	def create
-    respond_with Curriculum.create(curr_params.merge(user_id: current_user.id))
-  end
+		respond_with Curriculum.create(curr_params.merge(user_id: current_user.id))
+	end
+
+	def show
+		puts Curriculum.find(params[:id])
+		respond_with Curriculum.find(params[:id])
+	end
 
 	private
 	def curr_params
