@@ -36,3 +36,9 @@ gem 'wolfram-alpha'
 gem 'nokogiri'
 
 gem 'paperclip'
+
+gem 'amazon-ecs'
+
+gem 'rack-cache'
+
+gem 'activesupport'
