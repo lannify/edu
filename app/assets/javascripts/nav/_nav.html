@@ -7,8 +7,6 @@
         <li ><a href="#/instructor_dash">Instructor Dashboard</a></li>
         <li ><a href="#/student_dash">Student Dashboard</a></li>
         <li ><a href="#/curriculums">All Curriculums</a></li>
-        <li ><a href="#/curriculum">My Curriculum</a></li>
-        <!-- <li ><a href="#/add_curriculum">Add A Curriculum</a></li> -->
         <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
         <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
         <li ng-show="signedIn()"><a href="#/student_dash">{{ user.name }}</a></li>

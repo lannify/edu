@@ -22,7 +22,6 @@ angular.module('edu')
 
 		o.get = function(id) {
 			return $http.get('/curriculums/' + id + '.json').success(function(data){
-				console.log(data);
 				angular.copy(data, o.curriculum);
 			});
 		};

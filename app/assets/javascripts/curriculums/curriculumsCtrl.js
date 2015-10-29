@@ -16,4 +16,7 @@ angular.module('edu')
 		    $scope.grade_level = '';
 		};
 		
-}]);
+	}
+
+	
+]);
