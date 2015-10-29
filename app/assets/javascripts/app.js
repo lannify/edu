@@ -73,7 +73,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 
 		})
 		.state('add_lesson', {
-			url: '/add_lesson',
+			url: '/add_lesson/:curriculum_id/:subject_id/:course_id/:chapter_id',
 			templateUrl: 'lessons/_addLesson.html',
 			controller: 'lessonsCtrl'
 
