@@ -1,19 +1,11 @@
 angular.module('edu')
 
-.factory('curriculums', ['$http',
+.factory('curriculum', ['$http',
 	function($http){
 
 		var o = {
-			curriculums: [],
+			curriculum: [],
 			supplies: []
-
-		};
-
-		o.getAll = function() {
-			return $http.get('/curriculums.json').success(function(data){
-				console.log(data);
-				angular.copy(data, o.curriculums);
-			});
 		};
 
 		o.getSupplies = function() {
@@ -24,14 +16,13 @@ angular.module('edu')
 
 		o.create = function(curriculum) {
 			return $http.post('/curriculums.json', curriculum).success(function(data){
-				o.curriculums.push(data);
+				o.curriculum.push(data);
 			});
 		};
 
 		o.get = function(id) {
-			return $http.get('/curriculums/' + id + '.json').then(function(res){
-				console.log(res.data);
-				return res.data;
+			return $http.get('/curriculums/' + id + '.json').success(function(data){
+				angular.copy(data, o.curriculum);
 			});
 		};
 

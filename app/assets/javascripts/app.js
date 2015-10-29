@@ -20,31 +20,33 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				}]
 			}			
 		})
-		.state('curriculum', {
-			url: '/curriculum',
-			templateUrl: 'curriculums/_curriculum.html',
-			controller: 'curriculumsCtrl',
-			resolve: {
-				postPromise: ['supplies', function(supplies){
-					return supplies.getAll();
-				}]
-			}		
-		})
 		// .state('curriculum', {
-		// 	url: '/curriculums/{id}',
-		// 	templateUrl: 'curriculums/_curriculums.html',
+		// 	url: '/curriculum',
+		// 	templateUrl: 'curriculums/_curriculum.html',
 		// 	controller: 'curriculumsCtrl',
 		// 	resolve: {
-		// 		post: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-		// 			return curriculums.get($stateParams.id);
+		// 		postPromise: ['supplies', function(supplies){
+		// 			return supplies.getAll();
 		// 		}]
-		// 	}
+		// 	}		
 		// })
+		.state('curriculum', {
+			url: '/curriculums/{id}',
+			templateUrl: 'curriculum/_curriculum.html',
+			controller: 'curriculumCtrl',
+			resolve: {
+				post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
+					
+					return curriculum.get($stateParams.id);
+				}]
+			}
+		})
 
 		.state('add_curriculum', {
 			url: '/add_curriculum',
 			templateUrl: 'curriculums/_addCurriculum.html',
-			controller: 'curriculumsCtrl'
+			controller: 'curriculumsCtrl',
+	
 			// data: {
 		 //        permissions: {
 		 //            except: ['anonymous', 'student'],
@@ -54,9 +56,16 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 
 		.state('add_subject', {
-			url: '/add_subject',
+			url: '/add_subject/:curriculum_id',
 			templateUrl: 'subjects/_addSubject.html',
 			controller: 'subjectsCtrl'
+			// resolve: {
+			// 	post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
+					
+			// 		return curriculum.get($stateParams.id);
+			// 	}]
+			// }
+
 
 		})
 		.state('add_course', {
