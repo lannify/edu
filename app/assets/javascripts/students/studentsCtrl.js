@@ -18,8 +18,10 @@ angular.module('edu')
 			    curriculum_id: $scope.curriculum_1
 			});		
 			 $location.path("/curriculums/" + $scope.curriculum_id);
-		    $scope.title = '';
-		    $scope.description = '';
+		    $scope.name = '';
+		    $scope.email = '';
+		    $scope.password = '';
+	
 		};
 		
 }]);
