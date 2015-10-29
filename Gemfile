@@ -45,3 +45,5 @@ gem 'rack-cache'
 gem 'activesupport'
 
 gem 'asin'
+
+gem 'devise_token_auth'
