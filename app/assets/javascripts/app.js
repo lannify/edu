@@ -107,12 +107,26 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				})
 			}]
 		})
+
+		.state('add_student', {
+			url: '/add_student',
+			templateUrl: 'students/_addStudent.html',
+			controller: 'studentsCtrl',
+			resolve: {
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
+				}]
+			}
+
+		})
 		
 		.state('supplies', {
 			url: '/supplies',
 			templateUrl: 'supplies/_supplies.html',
 			controller: 'suppliesCtrl'
 		});
+
+
 		
 		$urlRouterProvider.otherwise('home');
 	}],

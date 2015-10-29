@@ -1,0 +1,50 @@
+<div class="green_background">
+  <div class="container">
+    <div class="form_container">
+        <div class="page-header">
+          <h2>Add Student</h2>
+        </div>
+
+      
+        <form ng-submit="addLesson()">
+          <div class="input-group">
+            <label for="exampleInputEmail1">Student Name</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Intro" ng-model="name">
+          </div>
+
+          <div class="input-group">
+            <label for="exampleInputEmail1">Student Email</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Intro" ng-model="email">
+          </div>
+
+
+		<div class="input-group">
+            <label for="exampleInputEmail1">Create Student Password</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Intro" ng-model="password">
+          </div>
+
+          <div class="input-group">
+            <label for="exampleInputEmail1">Confirm Student Password</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Intro" ng-model="confirm_password">
+          </div>
+          <div class="input-group select_style">
+            <label for="exampleInputEmail1">Curriculum</label>
+        	<select class="form-control" ng-options="curriculum.id as curriculum.name for curriculum in curriculums" ng-model="curriculum_1">
+   				<option value="" disabled>Pick from your curriculums</option>
+        	</select>
+        	<h5>or</h5>
+        	<select class="form-control" ng-options="curriculum.id as curriculum.name for curriculum in curriculums | orderBy: 'name'" ng-model="curriculum_2">
+   				<option value="" disabled>Pick from all curriculums</option>
+        	</select>
+          </div>
+        
+         
+          <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add Lesson!">
+        </form>
+
+        </div>
+
+  </div>
+
+</div> 
+  
