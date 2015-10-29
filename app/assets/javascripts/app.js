@@ -36,7 +36,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'curriculumCtrl',
 			resolve: {
 				post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
-		
+					
 					return curriculum.get($stateParams.id);
 				}]
 			}
@@ -45,7 +45,8 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('add_curriculum', {
 			url: '/add_curriculum',
 			templateUrl: 'curriculums/_addCurriculum.html',
-			controller: 'curriculumsCtrl'
+			controller: 'curriculumsCtrl',
+	
 			// data: {
 		 //        permissions: {
 		 //            except: ['anonymous', 'student'],
@@ -55,9 +56,16 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 
 		.state('add_subject', {
-			url: '/add_subject',
+			url: '/add_subject/:curriculum_id',
 			templateUrl: 'subjects/_addSubject.html',
 			controller: 'subjectsCtrl'
+			// resolve: {
+			// 	post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
+					
+			// 		return curriculum.get($stateParams.id);
+			// 	}]
+			// }
+
 
 		})
 		.state('add_course', {

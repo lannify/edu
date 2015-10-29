@@ -5,16 +5,18 @@
           <h2>Add Subject</h2>
         </div>
 
-      
+        
         <form ng-submit="addSubject()">
-          <div class="input-group">
+                    <div class="input-group">
             <label for="exampleInputEmail1">Subject Title</label>
             <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Math" ng-model="title">
           </div>
            <div class="input-group">
             <label for="exampleInputEmail1">Subject Description</label>
+
+            
             <textarea class="form-control input_style" id="exampleInputText1" placeholder="Beginning Algebra for special Adults" ng-model="description"></textarea>
-            <input type="hidden" ng-model = "curriculum_id" value="">
+            <input type="hidden" ng-model="curriculum_id"  value="{{ curriculum_id }}">
           </div>        
           <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add Subject!">
         </form>

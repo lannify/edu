@@ -5,4 +5,7 @@ class Subject < ActiveRecord::Base
 	def as_json(options = {})
     super(options.merge(include: :courses))
 	end  
+
+
+
 end
