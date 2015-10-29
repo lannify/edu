@@ -38,10 +38,5 @@ gem 'nokogiri'
 
 gem 'paperclip'
 
-gem 'amazon-ecs'
+gem 'jquery-ui-rails'
 
-gem 'rack-cache'
-
-gem 'activesupport'
-
-gem 'asin'
