@@ -1,12 +1,16 @@
 angular.module('edu')
 .controller('instructorCtrl', [
-'$scope', 'curriculums',
-	function($scope, curriculums, curruculum){
-		$scope.curriculums = curriculums.curriculums;
+'$scope', 'instructorFactory', 'Auth',
+	function($scope, instructorFactory, Auth){
+		$scope.instructors = instructorFactory.instructors;
+		$scope.instructor_id = Auth._currentUser.id;
+		console.log($scope);
+		// console.log($scope.instructor_id);
+		console.log(Auth._currentUser);
 
-		$scope.addCurriculum = function(){			
+		$scope.addInstructor = function(){			
 			 if(!$scope.name || $scope.name === '') { return; }
-			 curriculums.create({
+			 instructors.create({
 			    name: $scope.name,	
 			    grade_level: $scope.grade_level	  
 			});		
