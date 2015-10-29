@@ -80,6 +80,11 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('instructor_dash', {
 			url: '/instructor_dash',
 			templateUrl: 'dashboard/_instructor_dash.html',
+			resolve: {
+				postPromise: ['instructorFactory', function(instructors){
+					return instructors.getAll();
+				}]
+			}
 			
 		})
 		.state('student_dash', {

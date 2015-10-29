@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :students
   root to: 'application#angular'
 
+  resources :users
   resources :curriculums
   resources :subjects
   resources :students

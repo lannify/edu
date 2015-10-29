@@ -4,7 +4,7 @@ angular.module('edu')
 	function($scope, curriculums, supplies, $location){
 
 		$scope.curriculums = curriculums.curriculums;		
-		console.log(curriculums);
+		// console.log(curriculums);
 		$scope.supplies = supplies.supplies;
 		$scope.addCurriculum = function(){			
 			 if(!$scope.name || $scope.name === '') { return; }
