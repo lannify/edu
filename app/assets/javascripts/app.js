@@ -103,6 +103,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'AuthCtrl',
 			onEnter: ['$state', 'Auth', function($state, Auth) {
 				Auth.currentUser().then(function (){
+					console.log(Auth.currentUser);
 					$state.go('home');
 				})
 			}]
