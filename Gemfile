@@ -37,3 +37,5 @@ gem 'wolfram-alpha'
 gem 'nokogiri'
 
 gem 'paperclip'
+
+gem 'jquery-ui-rails'

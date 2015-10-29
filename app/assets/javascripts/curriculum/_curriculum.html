@@ -44,7 +44,7 @@
       <div class="col-md-6" ng-repeat="subject in curriculum.subjects">
         <div class="page-header">
           <h3>{{subject.title}}</h3>
-          <a href="#" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Delete</a>
+          <a ui-sref="edit_subject({curriculum_id: curriculum.id, subject_id: subject.id})" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Delete</a>
         </div>
 
         <div class="subject_body_content">
@@ -61,7 +61,7 @@
                 <table class="table table_no_line lesson_title">
                   <tr ng-repeat="lesson in chapter.lessons"> 
                     <td><h4>{{lesson.title}}</h4></td>
-                    <td><h5><a href="#" >Edit</a></h5></td>
+                    <td><h5><a href="#" >Edit</a> | <a href="#" class="button_red_text">Remove</a></h5></td>
                   </tr>
 
                      
