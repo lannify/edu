@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 gem 'angularjs-rails'
+
 gem 'angular-rails-templates'
 
 gem 'sprockets'
@@ -37,10 +38,5 @@ gem 'nokogiri'
 
 gem 'paperclip'
 
-gem 'amazon-ecs'
-
-gem 'rack-cache'
-
-gem 'activesupport'
-
 gem 'jquery-ui-rails'
+
