@@ -44,12 +44,14 @@
       <div class="col-md-6" ng-repeat="subject in curriculum.subjects">
         <div class="page-header">
           <h3>{{subject.title}}</h3>
+          <a href="#" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Remove</a>
         </div>
 
         <div class="subject_body_content">
-
+            <a href="#" class="button_green_text" >Add Course</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a>
           <ul class="list-unstyled subject_category" ng-repeat=" course in subject.courses">
-            <li><h4 class="course_title">{{course.title}}</h4> <a href="#" class="button_green_text" >Add Course</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
+
+            <li><h4 class="course_title">{{course.title}}</h4></li>
             
             <ul ng-repeat="chapter in course.chapters">
               <li><h4 class="chapter_title">{{chapter.title}}</h4> <a href="#" class="button_green_text" >Add Chapter</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
