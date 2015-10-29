@@ -79,12 +79,12 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
-			templateUrl: 'dashboard/instructor_dash.html',
+			templateUrl: 'dashboard/_instructor_dash.html',
 			
 		})
 		.state('student_dash', {
 			url: '/student_dash',
-			templateUrl: 'dashboard/student_dash.html',
+			templateUrl: 'dashboard/_student_dash.html',
 			
 		})
 		.state('login', {
