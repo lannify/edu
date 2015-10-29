@@ -8,7 +8,12 @@ class SubjectsController < ApplicationController
 
 	def create
     respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
-  end
+  	end
+
+
+  	def edit
+    respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
+  	end
 
 	private
 	def subject_params
