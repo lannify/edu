@@ -275,6 +275,17 @@ h2 span.lesson_section {
 }
 
 
+.button_white_text {
+
+	color: #fff
+}
+
+.button_white_text:hover {
+
+	color: #d1d0d2
+}
+
+
 .student_table {
 margin-top: 50px;
 
@@ -346,9 +357,7 @@ hr {
 	width: 46.5%;
 }
 
-.subject_body_content a:nth-child(odd){
-	margin-right: 6%;
-}
+
 
 .course_title {
 	text-transform: uppercase;
