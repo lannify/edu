@@ -4,13 +4,14 @@
     <li class="main_logo"><h2><a href="#/home"><span class="blue_color_text">Curricu</span>Learn</h2></a></li>
 
     <div class="nav_elements">
-        <li ><a href="#/instructor_dash">Instructor Dashboard</a></li>
-        <li ><a href="#/student_dash">Student Dashboard</a></li>
+        <li ng-if="user.user_level == '2'"><a href="#/instructor_dash">Instructor Dashboard</a></li>
+        <li ng-if="user.user_level == '3'"><a href="#/student_dash">Student Dashboard</a></li>
         <li ><a href="#/curriculums">All Curriculums</a></li>
         <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
         <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
         <li ng-show="signedIn()"><a href="#/student_dash">{{ user.name }}</a></li>
         <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
+        
 
 
     </div>

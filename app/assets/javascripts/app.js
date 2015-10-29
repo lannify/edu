@@ -20,16 +20,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				}]
 			}			
 		})
-		// .state('curriculum', {
-		// 	url: '/curriculum',
-		// 	templateUrl: 'curriculums/_curriculum.html',
-		// 	controller: 'curriculumsCtrl',
-		// 	resolve: {
-		// 		postPromise: ['supplies', function(supplies){
-		// 			return supplies.getAll();
-		// 		}]
-		// 	}		
-		// })
 		.state('curriculum', {
 			url: '/curriculums/{id}',
 			templateUrl: 'curriculum/_curriculum.html',
@@ -59,14 +49,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			url: '/add_subject/:curriculum_id',
 			templateUrl: 'subjects/_addSubject.html',
 			controller: 'subjectsCtrl'
-			// resolve: {
-			// 	post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
-					
-			// 		return curriculum.get($stateParams.id);
-			// 	}]
-			// }
-
-
 		})
 		.state('add_course', {
 			url: '/add_course',
@@ -111,7 +93,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'AuthCtrl',
 			onEnter: ['$state', 'Auth', function($state, Auth) {
 				Auth.currentUser().then(function (){
-					console.log(Auth.currentUser);
 					$state.go('home');
 				})
 			}]
@@ -126,6 +107,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				})
 			}]
 		})
+		
 		.state('supplies', {
 			url: '/supplies',
 			templateUrl: 'supplies/_supplies.html',
