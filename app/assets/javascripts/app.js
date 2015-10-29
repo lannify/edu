@@ -20,16 +20,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				}]
 			}			
 		})
-		// .state('curriculum', {
-		// 	url: '/curriculum',
-		// 	templateUrl: 'curriculums/_curriculum.html',
-		// 	controller: 'curriculumsCtrl',
-		// 	resolve: {
-		// 		postPromise: ['supplies', function(supplies){
-		// 			return supplies.getAll();
-		// 		}]
-		// 	}		
-		// })
 		.state('curriculum', {
 			url: '/curriculums/{id}',
 			templateUrl: 'curriculum/_curriculum.html',
@@ -59,29 +49,21 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			url: '/add_subject/:curriculum_id',
 			templateUrl: 'subjects/_addSubject.html',
 			controller: 'subjectsCtrl'
-			// resolve: {
-			// 	post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
-					
-			// 		return curriculum.get($stateParams.id);
-			// 	}]
-			// }
-
-
 		})
 		.state('add_course', {
-			url: '/add_course',
+			url: '/add_course/:curriculum_id/:subject_id',
 			templateUrl: 'courses/_addCourse.html',
 			controller: 'coursesCtrl'
 
 		})
 		.state('add_chapter', {
-			url: '/add_chapter',
+			url: '/add_chapter/:curriculum_id/:subject_id/:course_id',
 			templateUrl: 'chapters/_addChapter.html',
-			controller: 'chapterCtrl'
+			controller: 'chaptersCtrl'
 
 		})
 		.state('add_lesson', {
-			url: '/add_lesson',
+			url: '/add_lesson/:curriculum_id/:subject_id/:course_id/:chapter_id',
 			templateUrl: 'lessons/_addLesson.html',
 			controller: 'lessonsCtrl'
 
@@ -125,6 +107,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				})
 			}]
 		})
+		
 		.state('supplies', {
 			url: '/supplies',
 			templateUrl: 'supplies/_supplies.html',

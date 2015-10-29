@@ -18,6 +18,6 @@ class Curriculum < ActiveRecord::Base
 			    					include: [
 			    					lessons: {
 			    					only: [:title, :id]
-	    				}]	}]}]}]}))
+	    				}]}]}]}]}))
 	end
 end

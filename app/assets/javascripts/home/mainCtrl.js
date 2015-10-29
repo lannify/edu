@@ -2,7 +2,7 @@ angular.module('edu')
 .controller('MainCtrl', [
 '$scope', 'curriculums',
 	function($scope, curriculums){
-		$scope.test = 'Hello world!';
+		
 		$scope.curriculums = curriculums.curriculums;
 		$scope.addCurriculum = function(){
 			if(!$scope.title || $scope.title === '') { return; }

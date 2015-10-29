@@ -44,23 +44,23 @@
       <div class="col-md-6" ng-repeat="subject in curriculum.subjects">
         <div class="page-header">
           <h3>{{subject.title}}</h3>
-          <a href="#" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Remove</a>
+          <a href="#" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Delete</a>
         </div>
 
         <div class="subject_body_content">
-            <a href="#" class="button_green_text" >Add Course</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a>
+            <a ui-sref="add_course({ curriculum_id: curriculum.id, subject_id: subject.id })" class="button_green_text weight_heavy" >Add Course</a>
           <ul class="list-unstyled subject_category" ng-repeat=" course in subject.courses">
 
-            <li><h4 class="course_title">{{course.title}}</h4></li>
+            <li><h4 class="course_title">{{course.title}}</h4> <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
             
             <ul ng-repeat="chapter in course.chapters">
-              <li><h4 class="chapter_title">{{chapter.title}}</h4> <a href="#" class="button_green_text" >Add Chapter</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
+              <li><h4 class="chapter_title">{{chapter.title}}</h4> <a ui-sref="add_chapter({ curriculum_id: curriculum.id, subject_id: subject.id, course_id: course.id })" class="button_green_text" >Add Chapter</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
               
               <ul>
                 <table class="table table_no_line lesson_title">
                   <tr ng-repeat="lesson in chapter.lessons"> 
                     <td><h4>{{lesson.title}}</h4></td>
-                    <td><h5><a href="#" >Edit</a> | <a href="#" class="button_green_text" >Add Lesson</a></h5></td>
+                    <td><h5><a href="#" >Edit</a> | <a ui-sref="add_lesson({ curriculum_id: curriculum.id, subject_id: subject.id, course_id: course.id, chapter_id: chapter.id })" class="button_green_text" >Add Lesson</a></h5></td>
                   </tr>
 
                      
