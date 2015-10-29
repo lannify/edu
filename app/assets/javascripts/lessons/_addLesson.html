@@ -1,0 +1,30 @@
+<div class="green_background">
+  <div class="container">
+    <div class="form_container">
+        <div class="page-header">
+          <h2>Add Lesson</h2>
+        </div>
+
+      
+        <form ng-submit="addLesson()">
+          <div class="input-group">
+            <label for="exampleInputEmail1">Lesson Name</label>
+            <input type="text" class="form-control input_style" id="exampleInputText1" placeholder="Ex: Intro" ng-model="title">
+          </div>
+
+          <div class="input-group">
+            <label for="exampleInputEmail1">Content</label>
+            <textarea rows="15" type="text" class="form-control input_style" id="exampleInputText1" placeholder="Add lesson here" ng-model="content">
+              </textarea>
+          </div>
+        
+         
+          <input type="submit"class="btn btn-primary btn-lg btn-block" value="Add Lesson!">
+        </form>
+
+        </div>
+
+  </div>
+
+</div> 
+  

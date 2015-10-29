@@ -1,4 +1,4 @@
-angular.module('edu', ['ui.router', 'templates', 'Devise'])
+angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 .config([
 	'$stateProvider',
 	'$urlRouterProvider',
@@ -7,23 +7,85 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: 'home/_home.html',
-			controller: 'MainCtrl',
-			resolve: {
-				curriculumPromise: ['curriculums', function(posts){
-					return posts.getAll();
-				}]
-			}
+			templateUrl: 'home/_home.html'
+		
 		})
 		.state('curriculums', {
-			url: '/curriculums/{id}',
+			url: '/curriculums',
 			templateUrl: 'curriculums/_curriculums.html',
 			controller: 'curriculumsCtrl',
 			resolve: {
-				curriculum: ['$stateParams', 'curriculums', function($stateParams, curriculums) {
-					return curriculums.get($stateParams.id);
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
+				}]
+			}			
+		})
+		.state('curriculum', {
+			url: '/curriculums/{id}',
+			templateUrl: 'curriculum/_curriculum.html',
+			controller: 'curriculumCtrl',
+			resolve: {
+				post: ['$stateParams', 'curriculum', function($stateParams, curriculum) {
+					
+					return curriculum.get($stateParams.id);
 				}]
 			}
+		})
+
+		.state('add_curriculum', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_addCurriculum.html',
+			controller: 'curriculumsCtrl',
+	
+			// data: {
+		 //        permissions: {
+		 //            except: ['anonymous', 'student'],
+		 //            redirectTo: 'login'
+			// 	    }
+		 //    }
+		})
+
+		.state('add_subject', {
+			url: '/add_subject/:curriculum_id',
+			templateUrl: 'subjects/_addSubject.html',
+			controller: 'subjectsCtrl'
+		})
+		.state('add_course', {
+			url: '/add_course/:curriculum_id/:subject_id',
+			templateUrl: 'courses/_addCourse.html',
+			controller: 'coursesCtrl'
+
+		})
+		.state('add_chapter', {
+			url: '/add_chapter/:curriculum_id/:subject_id/:course_id',
+			templateUrl: 'chapters/_addChapter.html',
+			controller: 'chaptersCtrl'
+
+		})
+		.state('add_lesson', {
+			url: '/add_lesson/:curriculum_id/:subject_id/:course_id/:chapter_id',
+			templateUrl: 'lessons/_addLesson.html',
+			controller: 'lessonsCtrl'
+
+		})
+		.state('lesson', {
+			url: '/lesson',
+			templateUrl: 'lessons/_lesson.html'			
+		})
+		.state('add_curriculums', {
+			url: '/add_curriculum',
+			templateUrl: 'curriculums/_add_curriculum.html',
+			
+		})
+		.state('instructor_dash', {
+			url: '/instructor_dash',
+			templateUrl: 'dashboard/instructor_dash.html',
+			
+		})
+		.state('student_dash', {
+			url: '/student_dash',
+			templateUrl: 'dashboard/student_dash.html',
+			
 		})
 		.state('login', {
 			url: '/login',
@@ -44,8 +106,22 @@ angular.module('edu', ['ui.router', 'templates', 'Devise'])
 					$state.go('home');
 				})
 			}]
+		})
+		
+		.state('supplies', {
+			url: '/supplies',
+			templateUrl: 'supplies/_supplies.html',
+			controller: 'suppliesCtrl'
 		});
 		
-
 		$urlRouterProvider.otherwise('home');
-	}]);
+	}],
+	['$httpProvider', function($httpProvider) {
+
+        $httpProvider.defaults.useXDomain = true;
+
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+    }
+
+]);

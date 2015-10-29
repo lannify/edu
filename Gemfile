@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 gem 'angularjs-rails'
+
 gem 'angular-rails-templates'
 
 gem 'sprockets'
@@ -30,3 +31,17 @@ gem 'angular_rails_csrf'
 gem 'devise', '~> 3.4.0'
 
 gem 'hirb'
+
+gem 'wolfram-alpha'
+
+gem 'nokogiri'
+
+gem 'paperclip'
+
+gem 'amazon-ecs'
+
+gem 'rack-cache'
+
+gem 'activesupport'
+
+gem 'asin'

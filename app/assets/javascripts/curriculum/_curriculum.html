@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 profile_box">
+      <div class="profile_box">
+        <h1><span> {{curriculum.name }}</span></h1>
+        <h4><span>Instructor:</span> {{curriculum.name }}</h4>
+        <h4><span>5</span> Students using curriculum</h4>
+
+      </div>
+    </div>
+    
+  <div class="col-md-6 dashboard_top_buttons">
+      
+      <a type="button" ui-sref="add_subject({curriculum_id: curriculum.id})" class="btn btn-primary btn-lg button_green" >Add Subject</a>
+  
+      <a type="button" href="#/delete_curriculum" class="btn btn-primary btn-lg button_red">Delete Curriculum</a>
+  
+
+    </div>
+  </div>
+  <div class="instruct_table">
+
+    <h3>Supplies you'll need for this curriculum</h3>
+    <table class="table target_stuff">
+      <tr ng-repeat="supply in supplies">
+      <!--   <td><img src={{supply.item_image}}></td>
+        <td><h4><strong>{{supply.item_name}}</strong></h4><a href="{{supply.item_url}}">Get It</a></td>
+        <td><h4>${{supply.item_price | number:0 }}</h4></td> -->
+     <!--    <td><h4><a href="{{supply.item_url}}">Get It</a></h4></td> -->
+
+      </tr>
+    </table>
+
+    <a type="button" href="#/supplies" class="btn btn-primary btn-lg button_red">Add supplies</a>
+  </div>
+
+  <div class="instruct_table" style="margin-top:100px">
+ 
+
+    <h3>Subjects</h3>
+    <hr>
+
+    <div class="curriculum_subject_box">
+      <div class="col-md-6" ng-repeat="subject in curriculum.subjects">
+        <div class="page-header">
+          <h3>{{subject.title}}</h3>
+          <a href="#" class="button_white_text">Edit</a> | <a href="#" class="button_white_text">Delete</a>
+        </div>
+
+        <div class="subject_body_content">
+            <a ui-sref="add_course({ curriculum_id: curriculum.id, subject_id: subject.id })" class="button_green_text weight_heavy" >Add Course</a>
+          <ul class="list-unstyled subject_category" ng-repeat=" course in subject.courses">
+
+            <li><h4 class="course_title">{{course.title}}</h4> <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
+            
+            <ul ng-repeat="chapter in course.chapters">
+              <li><h4 class="chapter_title">{{chapter.title}}</h4> <a ui-sref="add_chapter({ curriculum_id: curriculum.id, subject_id: subject.id, course_id: course.id })" class="button_green_text" >Add Chapter</a> |  <a href="#" class="margin_clear">Edit</a> | <a href="#" class="button_red_text">Remove</a></li>
+              
+              <ul>
+                <table class="table table_no_line lesson_title">
+                  <tr ng-repeat="lesson in chapter.lessons"> 
+                    <td><h4>{{lesson.title}}</h4></td>
+                    <td><h5><a href="#" >Edit</a> | <a ui-sref="add_lesson({ curriculum_id: curriculum.id, subject_id: subject.id, course_id: course.id, chapter_id: chapter.id })" class="button_green_text" >Add Lesson</a></h5></td>
+                  </tr>
+
+                     
+                </table>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

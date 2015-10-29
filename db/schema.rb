@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024075459) do
+ActiveRecord::Schema.define(version: 20151025142922) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -58,10 +58,12 @@ ActiveRecord::Schema.define(version: 20151024075459) do
     t.integer  "category_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
   end
 
   add_index "curriculums", ["category_id"], name: "index_curriculums_on_category_id"
   add_index "curriculums", ["instructor_id"], name: "index_curriculums_on_instructor_id"
+  add_index "curriculums", ["user_id"], name: "index_curriculums_on_user_id"
 
   create_table "instructor_curriculums", force: :cascade do |t|
     t.integer  "instructor_id"
@@ -124,22 +126,11 @@ ActiveRecord::Schema.define(version: 20151024075459) do
   add_index "student_curriculums", ["student_id"], name: "index_student_curriculums_on_student_id"
 
   create_table "students", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "instructor_user_id"
+    t.integer "student_user_id"
   end
 
-  add_index "students", ["email"], name: "index_students_on_email", unique: true
-  add_index "students", ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
+  add_index "students", ["instructor_user_id", "student_user_id"], name: "index_students_on_instructor_user_id_and_student_user_id", unique: true
 
   create_table "subjects", force: :cascade do |t|
     t.string   "title"
@@ -151,6 +142,22 @@ ActiveRecord::Schema.define(version: 20151024075459) do
 
   add_index "subjects", ["curriculum_id"], name: "index_subjects_on_curriculum_id"
 
+  create_table "supplies", force: :cascade do |t|
+    t.string   "item_name"
+    t.decimal  "item_price"
+    t.string   "item_image"
+    t.string   "item_url"
+    t.integer  "curriculum_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "supplies", ["curriculum_id"], name: "index_supplies_on_curriculum_id"
+
   create_table "tests", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -160,5 +167,25 @@ ActiveRecord::Schema.define(version: 20151024075459) do
   end
 
   add_index "tests", ["chapter_id"], name: "index_tests_on_chapter_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.integer  "user_level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
