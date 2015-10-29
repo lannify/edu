@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :curriculums
   resources :subjects
+  resources :students
   resources :courses
   resources :chapters
   resources :lessons

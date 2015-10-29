@@ -11,7 +11,6 @@ angular.module('edu')
 
 		o.getAll = function() {
 			return $http.get('/curriculums.json').success(function(data){
-				console.log(data);
 				angular.copy(data, o.curriculums);
 			});
 		};

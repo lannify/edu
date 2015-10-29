@@ -533,20 +533,16 @@ hr {
 .target_stuff tr td:first-child {
 	width: 100px;
 	padding-top: 10px !important;
-
-
 }
 
 
 .search_curriculum {
-
 	width: 100%;
     height: 40px;
     padding-left: 10px;
     margin-top: 27px;
     border: 1px solid #d1d0d2;
 }
-
 
 .table tr td img {
 	width: 80px;
@@ -559,10 +555,32 @@ hr {
 	margin-top: -20px
 }
 
+
+.select_style select{
+	margin-bottom: 15px !important;
+}
+
+
 .target_text {
 	text-align: center;
 }
 
+.subject_body_content a.weight_heavy {
+
+		width: 120px;
+		text-align: center;
+}
+
 .weight_heavy {
 	font-family: 'Gotham-bold';
-	display: inline-block; margin: 0 auto;}
+	display: inline-block; margin: 0 auto;
+	background: #9BBF75;
+	border-radius: 5px;
+	color: #fff;
+	padding: 5px 10px 4px;
+	margin-bottom: 30px;
+}
+.weight_heavy:hover {
+	background: #E55C65;
+	color: #fff;
+}
