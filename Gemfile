@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 gem 'angularjs-rails'
+
 gem 'angular-rails-templates'
 
 gem 'sprockets'
@@ -42,3 +43,5 @@ gem 'amazon-ecs'
 gem 'rack-cache'
 
 gem 'activesupport'
+
+gem 'asin'
