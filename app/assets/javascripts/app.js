@@ -1,4 +1,4 @@
-angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
+angular.module('edu', ['ui.router', 'templates', 'Devise'])
 .config([
 	'$stateProvider',
 	'$urlRouterProvider',
