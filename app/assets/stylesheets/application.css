@@ -565,6 +565,22 @@ hr {
 	text-align: center;
 }
 
+.subject_body_content a.weight_heavy {
+
+		width: 120px;
+		text-align: center;
+}
+
 .weight_heavy {
 	font-family: 'Gotham-bold';
-	display: inline-block; margin: 0 auto;}
+	display: inline-block; margin: 0 auto;
+	background: #9BBF75;
+	border-radius: 5px;
+	color: #fff;
+	padding: 5px 10px 4px;
+	margin-bottom: 30px;
+}
+.weight_heavy:hover {
+	background: #E55C65;
+	color: #fff;
+}
