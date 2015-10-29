@@ -1,7 +1,7 @@
 angular.module('edu')
 .controller('curriculumsCtrl', [
-'$scope', 'curriculums', 'supplies', 
-	function($scope, curriculums, supplies){
+'$scope', 'curriculums', 'supplies', '$location',
+	function($scope, curriculums, supplies, $location){
 
 		$scope.curriculums = curriculums.curriculums;		
 		console.log(curriculums);
@@ -11,7 +11,8 @@ angular.module('edu')
 			 curriculums.create({
 			    name: $scope.name,	
 			    grade_level: $scope.grade_level	  
-			});		
+			});
+			$location.path("/curriculums");		
 		    $scope.name = '';
 		    $scope.grade_level = '';
 		};

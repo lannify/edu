@@ -13,7 +13,7 @@ angular.module('edu')
 			    title: $scope.title,
 			    description: $scope.description
 			});		
-			 $location.path("/curriculums/" + $scope.curriculum_id);
+			$location.path("/curriculums/" + $scope.curriculum_id);
 		    $scope.title = '';
 		    $scope.description = '';
 		};

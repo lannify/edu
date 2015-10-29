@@ -14,7 +14,7 @@ angular.module('edu')
 			    title: $scope.title,	
 			    description: $scope.description	  
 			});		
-			 $location.path("/curriculums/" + $stateParams.curriculum_id);
+			$location.path("/curriculums/" + $stateParams.curriculum_id);
 		    $scope.title = '';
 		    $scope.description = '';
 		};
