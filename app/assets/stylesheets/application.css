@@ -261,17 +261,28 @@ h2 span.lesson_section {
 
 .button_green_text {
 
-	color: #9BBF75
+	color: #9BBF75;
 }
 
 .button_blue_text {
 
-	color: #252A34
+	color: #252A34;
 }
 
 .button_red_text {
 
-	color: #E55C65
+	color: #E55C65;
+}
+
+
+.button_white_text {
+
+	color: #fff;
+}
+
+.button_white_text:hover {
+
+	color: #d1d0d2;
 }
 
 
@@ -346,9 +357,7 @@ hr {
 	width: 46.5%;
 }
 
-.subject_body_content a:nth-child(odd){
-	margin-right: 6%;
-}
+
 
 .course_title {
 	text-transform: uppercase;
@@ -553,3 +562,7 @@ hr {
 .target_text {
 	text-align: center;
 }
+
+.weight_heavy {
+	font-family: 'Gotham-bold';
+	display: inline-block; margin: 0 auto;}

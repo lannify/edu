@@ -51,19 +51,19 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'subjectsCtrl'
 		})
 		.state('add_course', {
-			url: '/add_course',
+			url: '/add_course/:curriculum_id/:subject_id',
 			templateUrl: 'courses/_addCourse.html',
 			controller: 'coursesCtrl'
 
 		})
 		.state('add_chapter', {
-			url: '/add_chapter',
+			url: '/add_chapter/:curriculum_id/:subject_id/:course_id',
 			templateUrl: 'chapters/_addChapter.html',
-			controller: 'chapterCtrl'
+			controller: 'chaptersCtrl'
 
 		})
 		.state('add_lesson', {
-			url: '/add_lesson',
+			url: '/add_lesson/:curriculum_id/:subject_id/:course_id/:chapter_id',
 			templateUrl: 'lessons/_addLesson.html',
 			controller: 'lessonsCtrl'
 
