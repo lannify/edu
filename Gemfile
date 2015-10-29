@@ -42,3 +42,5 @@ gem 'amazon-ecs'
 gem 'rack-cache'
 
 gem 'activesupport'
+
+gem 'jquery-ui-rails'
