@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030051845) do
+ActiveRecord::Schema.define(version: 20151030074611) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -135,6 +135,7 @@ ActiveRecord::Schema.define(version: 20151030051845) do
     t.datetime "updated_at",      null: false
     t.integer  "user_level"
     t.integer  "user_id"
+    t.integer  "progress"
   end
 
   create_table "subjects", force: :cascade do |t|

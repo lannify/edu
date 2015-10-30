@@ -114,8 +114,9 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('student_dash', {
 			url: '/student_dash',
 			templateUrl: 'dashboard/_student_dash.html',
-			
+			controller: 'dashboardCtrl'
 		})
+
 		.state('login', {
 			url: '/login',
 			templateUrl: 'auth/_login.html',

@@ -17,7 +17,13 @@ Curriculum.create([
 		name: "Fun 3rd Grade",
 		grade_level: 3,
 		category_id: 2,
-		user_id: 2
+		user_id: 1
+	},
+	{ 
+		name: "Computer Programming is Fun!",
+		grade_level: 5,
+		category_id: 3,
+		user_id: 1
 	}
 ])
 
@@ -291,28 +297,36 @@ Student.create([
 		email: "student1@test.com",
 		user_level: 4,
 		password: "asdfasdf",
-		user_id: 1
+		curriculum_id: 1,
+		user_id: 1,
+		progress: 70
 	},
 	{
 		name: "Rick",
 		email: "student2@test.com",
 		user_level: 4,
 		password: "asdfasdf",
-		user_id: 1
+		curriculum_id: 1,
+		user_id: 1,
+		progress: 90
 	},
 	{
 		name: "Morty",
 		email: "student3@test.com",
 		user_level: 4,
 		password: "asdfasdf",
-		user_id: 1
+		curriculum_id: 2,
+		user_id: 1,
+		progress: 10
 	},
 	{
 		name: "Lamar",
 		email: "student4@test.com",
 		user_level: 4,
 		password: "asdfasdf",
-		user_id: 1
+		curriculum_id: 3,
+		user_id: 1,
+		progress: 50
 	}
 ])
 

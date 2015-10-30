@@ -32,18 +32,12 @@
       <th><h3>Action</h3></th>
 
     </tr>
-    <tr>
-      <td><a href="#">Nick</a></td>
-      <td>My curriculum</td>
-      <td>100%</td>
+    <tr ng-repeat="student in instructor.students">
+      <td><a href="#/student_dash">{{student.name}}</a></td>
+      <td>{{curriculums[student.curriculum_id - 1].name}}</td>
+      <td>{{student.progress}} %</td>
       <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
 
-    </tr>
-    <tr>
-      <td><a href="#">Nick</a></td>
-      <td>My curriculum</td>
-      <td>30%</td>
-      <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
     </tr>
   </table>
 
@@ -55,17 +49,10 @@
       <th><h3>Action</h3></th>
 
     </tr>
-    <tr>
-      <td>Mike's 5th grade</td>
-      <td>3</td>
+    <tr ng-repeat="curriculum in instructor.curriculums">
+      <td>{{curriculum.name}}</td>
+      <td>{{getRandomSpan()}}</td>
 
-      <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
-
-    </tr>
-    <tr>
-      <td>Bills 3rd Grade</td>
-      <td>5</td>
-    
       <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
     </tr>
   </table>

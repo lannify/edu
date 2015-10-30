@@ -22,6 +22,12 @@ angular.module('edu')
 			});
 		};
 
+		student.get = function(id) {
+			return $http.get('/students/' + id + '.json').then(function(data){
+				angular.copy(data, student.students);
+			});
+		};
+
 		return student;
 	}
 ]);
