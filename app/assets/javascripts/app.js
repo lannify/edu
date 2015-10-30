@@ -77,13 +77,12 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 		.state('lesson', {
 			url: '/lessons/{id}',
+	
 			templateUrl: 'lessons/_lesson.html',
 			controller: 'lessonsCtrl',
 			resolve: {
-				post: ['$stateParams', 'lessons', function($stateParams, lessons) {
-			
-					return lessons.get($stateParams.id);
-					
+				post: ['$stateParams', 'lessons', function($stateParams, lessons) {			
+					return lessons.get($stateParams.id);					
 				}]
 			}
 		})

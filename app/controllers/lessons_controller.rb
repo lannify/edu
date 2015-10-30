@@ -8,11 +8,12 @@ class LessonsController < ApplicationController
 
 	def create
 		respond_with Lesson.create(lesson_params.merge(chapter_id: params[:chapter_id]))
+
 	end
 
 	def show
-		puts Lesson.find(params[:id])
 		respond_with Lesson.find(params[:id])
+		# respond_with Lesson.find(params[:id]).chapter.course
 	end
 
 	private
