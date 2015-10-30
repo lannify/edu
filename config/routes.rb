@@ -14,6 +14,14 @@ Rails.application.routes.draw do
   resources :supplies
   get 'destroy_subject/:id/:id2' => 'subjects#destroy'
 
+  get 'destroy_course/:id/:id2' => 'courses#destroy'
+  get 'destroy_chapter/:id/:id2' => 'chapters#destroy'
+  get 'destroy_lesson/:id/:id2' => 'lessons#destroy'
+
+get 'destroy_curriculum/:id' => 'curriculums#destroy'
+
+  
+
 
 
 

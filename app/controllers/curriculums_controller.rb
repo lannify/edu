@@ -14,6 +14,13 @@ class CurriculumsController < ApplicationController
 		respond_with Curriculum.find(params[:id])
 	end
 
+	def destroy
+    	curriculum = Curriculum.find(params[:id])
+    	curriculum.destroy
+    	redirect_to "#/curriculums"
+  	end
+
+
 	private
 	def curr_params
 		params.require(:curriculum).permit(:name, :grade_level)

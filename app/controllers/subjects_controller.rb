@@ -11,11 +11,8 @@ class SubjectsController < ApplicationController
   	end
 
   	def destroy
-
-  		puts params
     	subject = Subject.find(params[:id2])
     	subject.destroy
-
     	redirect_to "#/curriculums/#{params[:id]}"
   	end
 

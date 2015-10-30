@@ -10,6 +10,12 @@ class ChaptersController < ApplicationController
     respond_with Chapter.create(chapter_params.merge(course_id: params[:course_id]))
   end
 
+    def destroy
+    	chapter = Chapter.find(params[:id2])
+    	chapter.destroy
+    	redirect_to "#/curriculums/#{params[:id]}"
+  	end
+
 	private
 	def chapter_params
 		params.require(:chapter).permit(:title, :description)
