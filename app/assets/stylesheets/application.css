@@ -44,7 +44,7 @@
 
 
 body {
-
+	background: #f1f2f7;
 	font-family: 'Gotham-light';
 }
 
@@ -56,6 +56,12 @@ h1 span {
 
 h2 span.lesson_section {
 	font-family: 'Gotham-italic';
+
+}
+
+h4 {
+	font-size: 16px;
+    color: #999;
 
 }
 

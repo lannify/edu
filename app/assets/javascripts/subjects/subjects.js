@@ -5,7 +5,6 @@ angular.module('edu')
 
 
 		var subject = {
-
 			subjects: []
 		};
 
@@ -23,6 +22,14 @@ angular.module('edu')
 			return $http.post('/subjects.json', subject).success(function(data){
 				console.log(data);
 				subject.subjects.push(data);
+			});
+		};
+
+		subject.delete = function(id) {
+		
+			return $http.delete('/subjects/' + id + '.json').success(function(data){
+				console.log(data);
+				
 			});
 		};
 

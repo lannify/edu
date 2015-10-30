@@ -17,7 +17,13 @@ Curriculum.create([
 		name: "Fun 3rd Grade",
 		grade_level: 3,
 		category_id: 2,
-		user_id: 2
+		user_id: 1
+	},
+	{ 
+		name: "Computer Programming is Fun!",
+		grade_level: 5,
+		category_id: 3,
+		user_id: 1
 	}
 ])
 
@@ -273,4 +279,55 @@ Lesson.create([
 		chapter_id: 1
 	}
 ])
+
+User.create([
+	{
+		name: "Brendan Shanahan",
+		email: "test@test.com",
+		user_level: 2,
+		password: "asdfasdf",
+		password_confirmation: "asdfasdf"
+	}
+])
+
+# user_id is acting as instructor_id, gotta fix this
+Student.create([
+	{
+		name: "Mickey",
+		email: "student1@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		curriculum_id: 1,
+		user_id: 1,
+		progress: 70
+	},
+	{
+		name: "Rick",
+		email: "student2@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		curriculum_id: 1,
+		user_id: 1,
+		progress: 90
+	},
+	{
+		name: "Morty",
+		email: "student3@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		curriculum_id: 2,
+		user_id: 1,
+		progress: 10
+	},
+	{
+		name: "Lamar",
+		email: "student4@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		curriculum_id: 3,
+		user_id: 1,
+		progress: 50
+	}
+])
+
 
