@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
-
  *= require_tree .
  *= require_self
  */
@@ -180,6 +179,13 @@ h2 span.lesson_section {
 
 	min-height: 100vh;
 	background-color: #9BBF75
+}
+
+
+.pink_background {
+
+	min-height: 100vh;
+	background-color: #E55C65
 }
 
 .form_container {

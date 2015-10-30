@@ -50,6 +50,13 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			templateUrl: 'subjects/_addSubject.html',
 			controller: 'subjectsCtrl'
 		})
+
+		.state('edit_subject', {
+			url: '/edit_subject/:curriculum_id/:subject_id',
+			templateUrl: 'subjects/_editSubject.html',
+			controller: 'subjectsCtrl'
+		})
+
 		.state('add_course', {
 			url: '/add_course/:curriculum_id/:subject_id',
 			templateUrl: 'courses/_addCourse.html',
@@ -87,7 +94,18 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
-			templateUrl: 'dashboard/_instructor_dash.html',
+			templateUrl: 'dashboard/_instructorDash.html',
+			controller: 'instructorCtrl',
+			// onEnter: ['$state', 'Auth', function($state, Auth) {
+			// 	Auth.currentUser().then(function (){
+			// 		$state.go('instructor_dash');
+			// 	})
+			// }],
+			// resolve: {
+			// 	postPromise: ['instructorFactory', function(instructors){
+			// 		return instructors.getAll();
+			// 	}]
+			// }
 			
 		})
 		.state('student_dash', {

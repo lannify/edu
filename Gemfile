@@ -39,4 +39,3 @@ gem 'nokogiri'
 gem 'paperclip'
 
 gem 'jquery-ui-rails'
-

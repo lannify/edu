@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :chapters
   resources :lessons
   resources :supplies
+  resources :users
 
 
 
