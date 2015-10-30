@@ -33,7 +33,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 
 		.state('add_curriculum', {
-			url: '/add_curriculum',
+			url: '/add_curriculum/:instructor_id',
 			templateUrl: 'curriculums/_addCurriculum.html',
 			controller: 'curriculumsCtrl',
 	
@@ -127,7 +127,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 
 		.state('add_student', {
-			url: '/add_student',
+			url: '/add_student/:instructor_id',
 			templateUrl: 'students/_addStudent.html',
 			controller: 'studentsCtrl',
 			resolve: {

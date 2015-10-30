@@ -11,17 +11,17 @@ angular.module('edu')
 			if(!$scope.name || $scope.name === '') { return; }
 			 students.create({
 			 	instructor_id: $scope.instructor_id,
-			    name: $scope.name,
-			    email: $scope.email,
-			    password: $scope.password,
-			    user_level: 3,
-			    curriculum_id: $scope.curriculum_1
+		    name: $scope.name,
+		    email: $scope.email,
+		    password: $scope.password,
+		    user_level: 3,
+		    curriculum_id: $scope.curriculum_1
 			});		
-			 $location.path("/curriculums/" + $scope.curriculum_id);
+			 $location.path("/instructor_dash");
 		    $scope.name = '';
 		    $scope.email = '';
 		    $scope.password = '';
-	
+
 		};
 		
 }]);

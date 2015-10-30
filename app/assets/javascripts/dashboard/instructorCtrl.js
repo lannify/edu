@@ -3,10 +3,8 @@ angular.module('edu')
 '$scope', 'instructorFactory', 'Auth',
 	function($scope, instructorFactory, Auth){
 		$scope.instructors = instructorFactory.instructors;
-		$scope.instructor_id = Auth._currentUser.id;
-		console.log($scope);
-		// console.log($scope.instructor_id);
-		console.log(Auth._currentUser);
+		$scope.instructor = Auth._currentUser;
+		console.log($scope.instructor);
 
 		$scope.addInstructor = function(){			
 			 if(!$scope.name || $scope.name === '') { return; }
