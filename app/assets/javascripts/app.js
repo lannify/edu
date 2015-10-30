@@ -33,7 +33,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		})
 
 		.state('add_curriculum', {
-			url: '/add_curriculum',
+			url: '/add_curriculum/:instructor_id',
 			templateUrl: 'curriculums/_addCurriculum.html',
 			controller: 'curriculumsCtrl',
 	
@@ -43,6 +43,17 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		 //            redirectTo: 'login'
 			// 	    }
 		 //    }
+		})
+		
+		.state('add_student', {
+			url: '/add_student/:instructor_id',
+			templateUrl: 'students/_addStudent.html',
+			controller: 'studentsCtrl',
+			resolve: {
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
+				}]
+			}
 		})
 
 		.state('add_subject', {
@@ -109,7 +120,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('instructor_dash', {
 			url: '/instructor_dash',
 			templateUrl: 'dashboard/_instructorDash.html',
-			controller: 'instructorCtrl',
+			controller: 'dashboardCtrl',
 			// onEnter: ['$state', 'Auth', function($state, Auth) {
 			// 	Auth.currentUser().then(function (){
 			// 		$state.go('instructor_dash');
@@ -125,8 +136,9 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('student_dash', {
 			url: '/student_dash',
 			templateUrl: 'dashboard/_student_dash.html',
-			
+			controller: 'dashboardCtrl'
 		})
+
 		.state('login', {
 			url: '/login',
 			templateUrl: 'auth/_login.html',
@@ -149,18 +161,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 					$state.go('home');
 				})
 			}]
-		})
-
-		.state('add_student', {
-			url: '/add_student',
-			templateUrl: 'students/_addStudent.html',
-			controller: 'studentsCtrl',
-			resolve: {
-				postPromise: ['curriculums', function(curriculums){
-					return curriculums.getAll();
-				}]
-			}
-
 		})
 		
 		.state('supplies', {

@@ -5,18 +5,20 @@
       <img class="profile_image" src="assets/allison.jpg" >
       
       <div class="profile_box">
-        <h2>Allison Dreher</h2>
-        <h4><span>Instructor{{user.user_level}}</span></h4>
-        <h4><span>2</span> Students</h4>
-        <h4><span>3</span> Curriculum</h4>
+        <h2>{{ instructor.name }}</h2>
+        <h4><span>Instructor</span></h4>
+        <h4><span>{{ instructor.students.length }}</span> Students</h4>
+        
+        <h4><span>{{ instructor.curriculums.length }}</span> Curriculums</h4>
+        
 
       </div>
 
     </div>
     <div class="col-md-6 dashboard_top_buttons">
       
-      <a type="button" href="#/add_curriculum" class="btn btn-primary btn-lg button_blue">Add new curriculum</a>
-      <a type="button" href="#" class="btn btn-primary btn-lg button_green">Add new student</a>
+      <a type="button" ui-sref="add_curriculum({ instructor_id: instructor.id })" class="btn btn-primary btn-lg button_blue">Add new curriculum</a>
+      <a type="button" ui-sref="add_student({ instructor_id: instructor.id })" class="btn btn-primary btn-lg button_green">Add new student</a>
 
     </div>
   </div>
@@ -30,18 +32,12 @@
       <th><h3>Action</h3></th>
 
     </tr>
-    <tr>
-      <td><a href="#">Nick</a></td>
-      <td>My curriculum</td>
-      <td>100%</td>
+    <tr ng-repeat="student in instructor.students">
+      <td><a href="#/student_dash">{{student.name}}</a></td>
+      <td>{{curriculums[student.curriculum_id - 1].name}}</td>
+      <td>{{student.progress}} %</td>
       <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
 
-    </tr>
-    <tr>
-      <td><a href="#">Nick</a></td>
-      <td>My curriculum</td>
-      <td>30%</td>
-      <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
     </tr>
   </table>
 
@@ -53,17 +49,10 @@
       <th><h3>Action</h3></th>
 
     </tr>
-    <tr>
-      <td>Mike's 5th grade</td>
-      <td>3</td>
+    <tr ng-repeat="curriculum in instructor.curriculums">
+      <td>{{curriculum.name}}</td>
+      <td>{{getRandomSpan()}}</td>
 
-      <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
-
-    </tr>
-    <tr>
-      <td>Bills 3rd Grade</td>
-      <td>5</td>
-    
       <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
     </tr>
   </table>

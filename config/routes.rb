@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   devise_for :instructors
-  devise_for :students
   root to: 'application#angular'
 
   resources :curriculums
@@ -20,5 +19,4 @@ Rails.application.routes.draw do
   get 'destroy_lesson/:id/:id2' => 'lessons#destroy'
   get 'destroy_curriculum/:id' => 'curriculums#destroy'
 
-  
 end
