@@ -6,18 +6,21 @@ angular.module('edu')
 		$scope.subject_id = $stateParams.subject_id;
 		$scope.course_id = $stateParams.course_id;
 		$scope.chapter_id = $stateParams.chapter_id;
+	
 		$scope.lessons = lessons.lessons;
-		$scope.addLesson = function(){		
+		console.log($scope.lessons);
 
+		$scope.addLesson = function(){		
 			if(!$scope.title || $scope.title === '') { return; }
 			 lessons.create({
 			 	chapter_id: $scope.chapter_id,
 			    title: $scope.title,
-			    description: $scope.content
+			    description: $scope.description
 			});		
-			 $location.path("/curriculums/" + $scope.curriculum_id);
+			 $location.path("/curriculums/" + $stateParams.curriculum_id);
 		    $scope.title = '';
 		    $scope.description = '';
+
 		};
 		
 }]);

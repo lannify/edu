@@ -60,8 +60,11 @@
               <ul>
                 <table class="table table_no_line lesson_title">
                   <tr ng-repeat="lesson in chapter.lessons"> 
-                    <td><h4>{{lesson.title}}</h4></td>
-                    <td><h5><a href="#" >Edit</a> | <a href="/destroy_lesson/{{ curriculum.id }}/{{ lesson.id }}" class="button_red_text">Remove</a></h5></td>
+
+
+                    <td><h4><a href="#/lessons/{{lesson.id}}" >{{lesson.title}}</a></h4></td>
+
+                    <td><h5><a href="#" >Edit</a> | <a href="/destroy_lesson/{{ curriculum.id }}/{{ lesson.id }}" class="button_red_text">Remove</a
                   </tr>
 
                      

@@ -104,8 +104,14 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'lessonsCtrl'
 		})
 		.state('lesson', {
-			url: '/lesson',
-			templateUrl: 'lessons/_lesson.html'			
+			url: '/lessons/{id}',	
+			templateUrl: 'lessons/_lesson.html',
+			controller: 'lessonsCtrl',
+			resolve: {
+				post: ['$stateParams', 'lessons', function($stateParams, lessons) {			
+					return lessons.get($stateParams.id);					
+				}]
+			}
 		})
 		.state('add_curriculums', {
 			url: '/add_curriculum',
