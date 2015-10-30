@@ -7,6 +7,7 @@ class LessonsController < ApplicationController
 	end
 
 	def create
+
 		respond_with Lesson.create(lesson_params.merge(chapter_id: params[:chapter_id]))
 
 	end
@@ -14,7 +15,14 @@ class LessonsController < ApplicationController
 	def show
 		respond_with Lesson.find(params[:id])
 		# respond_with Lesson.find(params[:id]).chapter.course
-	end
+  	end
+
+    def destroy
+    	lesson = Lesson.find(params[:id2])
+    	lesson.destroy
+    	redirect_to "#/curriculums/#{params[:id]}"
+  	end
+
 
 	private
 	def lesson_params

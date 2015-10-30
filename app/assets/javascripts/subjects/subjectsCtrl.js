@@ -18,5 +18,7 @@ angular.module('edu')
 		    $scope.title = '';
 		    $scope.description = '';
 		};
+
+
 		
 }]);
