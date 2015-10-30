@@ -9,7 +9,6 @@ angular.module('edu')
 		};
 
 		student.getAll = function() {
-
 			return $http.get('/students.json').success(function(data){
 				angular.copy(data, student.students);
 			});
@@ -17,7 +16,6 @@ angular.module('edu')
 
 
 		student.create = function(student) {
-		
 			return $http.post('/students.json', student).success(function(data){
 				console.log(data);
 				student.students.push(data);
@@ -26,4 +24,4 @@ angular.module('edu')
 
 		return student;
 	}
-	]);
+]);

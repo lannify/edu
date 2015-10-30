@@ -17,9 +17,6 @@ angular.module('edu')
 			$location.path("/instructor_dash");		
 		    $scope.name = '';
 		    $scope.grade_level = '';
-		};
-		
+		};	
 	}
-
-	
 ]);

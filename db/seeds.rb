@@ -274,3 +274,46 @@ Lesson.create([
 	}
 ])
 
+User.create([
+	{
+		name: "Brendan Shanahan",
+		email: "test@test.com",
+		user_level: 2,
+		password: "asdfasdf",
+		password_confirmation: "asdfasdf"
+	}
+])
+
+# user_id is acting as instructor_id, gotta fix this
+Student.create([
+	{
+		name: "Mickey",
+		email: "student1@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		user_id: 1
+	},
+	{
+		name: "Rick",
+		email: "student2@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		user_id: 1
+	},
+	{
+		name: "Morty",
+		email: "student3@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		user_id: 1
+	},
+	{
+		name: "Lamar",
+		email: "student4@test.com",
+		user_level: 4,
+		password: "asdfasdf",
+		user_id: 1
+	}
+])
+
+

@@ -87,7 +87,7 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 		.state('instructor_dash', {
 			url: '/instructor_dash',
 			templateUrl: 'dashboard/_instructorDash.html',
-			controller: 'instructorCtrl',
+			controller: 'dashboardCtrl',
 			// onEnter: ['$state', 'Auth', function($state, Auth) {
 			// 	Auth.currentUser().then(function (){
 			// 		$state.go('instructor_dash');

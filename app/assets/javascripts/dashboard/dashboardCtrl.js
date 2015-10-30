@@ -1,8 +1,8 @@
 angular.module('edu')
-.controller('instructorCtrl', [
-'$scope', 'instructorFactory', 'Auth',
-	function($scope, instructorFactory, Auth){
-		$scope.instructors = instructorFactory.instructors;
+.controller('dashboardCtrl', [
+'$scope', 'dashboardFactory', 'Auth',
+	function($scope, dashboardFactory, Auth){
+		$scope.instructors = dashboardFactory.instructors;
 		$scope.instructor = Auth._currentUser;
 		console.log($scope.instructor);
 
@@ -14,6 +14,6 @@ angular.module('edu')
 			});		
 		    $scope.name = '';
 		    $scope.grade_level = '';
-		};
-		
-}]);
+		};	
+	}
+]);

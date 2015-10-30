@@ -1,6 +1,6 @@
 angular.module('edu')
 
-.factory('instructorFactory', ['$http',
+.factory('dashboardFactory', ['$http',
 	function($http){
 		var instructors = {};
 

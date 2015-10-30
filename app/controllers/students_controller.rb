@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 	end
 
 	def create
-    respond_with Student.create(student_params.merge(instructor_id: params[:instructor_id]))
+    respond_with Student.create(student_params.merge(user_id: current_user.id))
   end
 
 	private
