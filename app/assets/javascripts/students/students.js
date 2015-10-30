@@ -15,8 +15,8 @@ angular.module('edu')
 		};
 
 
-		student.create = function(student) {
-			return $http.post('/students.json', student).success(function(data){
+		student.create = function(new_student) {
+			return $http.post('/students.json', new_student).success(function(data){
 				console.log(data);
 				student.students.push(data);
 			});

@@ -44,6 +44,17 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			// 	    }
 		 //    }
 		})
+		
+		.state('add_student', {
+			url: '/add_student/:instructor_id',
+			templateUrl: 'students/_addStudent.html',
+			controller: 'studentsCtrl',
+			resolve: {
+				postPromise: ['curriculums', function(curriculums){
+					return curriculums.getAll();
+				}]
+			}
+		})
 
 		.state('add_subject', {
 			url: '/add_subject/:curriculum_id',
@@ -124,18 +135,6 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 					$state.go('home');
 				})
 			}]
-		})
-
-		.state('add_student', {
-			url: '/add_student/:instructor_id',
-			templateUrl: 'students/_addStudent.html',
-			controller: 'studentsCtrl',
-			resolve: {
-				postPromise: ['curriculums', function(curriculums){
-					return curriculums.getAll();
-				}]
-			}
-
 		})
 		
 		.state('supplies', {

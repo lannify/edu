@@ -21,6 +21,7 @@ angular.module('edu')
 			if(!$scope.name || $scope.name === '') { return; }
 			
 			students.create({
+			 	user_id: $stateParams.instructor_id,
 		    name: $scope.name,
 		    email: $scope.email,
 		    password: $scope.password,
