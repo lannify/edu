@@ -10,10 +10,12 @@ class SubjectsController < ApplicationController
     respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
   	end
 
-
-  	def edit
-    respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
+  	def destroy
+    	subject = Subject.find(params[:id2])
+    	subject.destroy
+    	redirect_to "#/curriculums/#{params[:id]}"
   	end
+
 
 	private
 	def subject_params

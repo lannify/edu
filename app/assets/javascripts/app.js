@@ -51,9 +51,8 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'subjectsCtrl'
 		})
 
-		.state('edit_subject', {
-			url: '/edit_subject/:curriculum_id/:subject_id',
-			templateUrl: 'subjects/_editSubject.html',
+		.state('destroy_subject', {
+			url: '/destroy_subject/:curriculum_id/:subject_id',
 			controller: 'subjectsCtrl'
 		})
 
@@ -63,17 +62,35 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'coursesCtrl'
 
 		})
+
+		.state('destroy_course', {
+			url: '/destroy_course/:curriculum_id/:course_id',
+			controller: 'coursesCtrl'
+		})
+
+
 		.state('add_chapter', {
 			url: '/add_chapter/:curriculum_id/:subject_id/:course_id',
 			templateUrl: 'chapters/_addChapter.html',
 			controller: 'chaptersCtrl'
 
 		})
+
+		.state('destroy_chapter', {
+			url: '/destroy_chapter/:curriculum_id/:chapter_id',
+			controller: 'chaptersCtrl'
+		})
+
 		.state('add_lesson', {
 			url: '/add_lesson/:curriculum_id/:subject_id/:course_id/:chapter_id',
 			templateUrl: 'lessons/_addLesson.html',
 			controller: 'lessonsCtrl'
 
+		})
+
+		.state('destroy_lesson', {
+			url: '/destroy_lesson/:curriculum_id/:lesson_id',
+			controller: 'lessonsCtrl'
 		})
 		.state('lesson', {
 			url: '/lesson',
@@ -83,6 +100,11 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			url: '/add_curriculum',
 			templateUrl: 'curriculums/_add_curriculum.html',
 			
+		})
+
+		.state('destroy_curriculum', {
+			url: '/destroy_curriculum/:curriculum_id',
+			controller: 'curriculumsCtrl'
 		})
 		.state('instructor_dash', {
 			url: '/instructor_dash',
@@ -115,6 +137,9 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				})
 			}]
 		})
+
+	
+
 		.state('register', {
 			url: '/register',
 			templateUrl: 'auth/_register.html',
