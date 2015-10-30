@@ -2,25 +2,33 @@ angular.module('edu')
 
 .factory('lessons', ['$http',
 	function($http){
-		var lesson = {
+		var lessons = {
 			lessons: []
 		};
 
-		lesson.getAll = function() {
+		lessons.getAll = function() {
 
 			return $http.get('/lessons.json').success(function(data){
-				angular.copy(data, lesson.lessons);
+				angular.copy(data, lessons.lessons);
 			});
 		};
 
-		lesson.create = function(lesson) {
+		lessons.create = function(lesson) {
 		
 			return $http.post('/lessons.json', lesson).success(function(data){
 				console.log(data);
-				lesson.lessons.push(data);
+				lessons.lessons.push(data);
 			});
 		};
 
-		return lesson;
+		lessons.get = function(id) {
+		
+			return $http.get('/lessons/' + id + '.json').success(function(data){
+					console.log(data);
+				angular.copy(data, lessons.lessons);
+			});
+		};
+
+		return lessons;
 	}
 	]);
