@@ -50,7 +50,7 @@
 
     </tr>
     <tr ng-repeat="curriculum in instructor.curriculums">
-      <td>{{curriculum.name}}</td>
+      <td><a ui-sref="curriculum({ id: curriculum.id })">{{curriculum.name}}</a></td>
       <td>1</td>
 
       <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
