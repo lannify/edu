@@ -1,7 +1,7 @@
 angular.module('edu')
 .controller('curriculumCtrl', [
-'$scope', 'curriculum', 'supplies', 
-	function($scope, curriculum, supplies){
+'$scope', 'curriculum', 'supplies', 'subjects', 
+	function($scope, curriculum, supplies, subjects){
 
 		$scope.curriculum = curriculum.curriculum;
 		console.log(curriculum);
@@ -14,6 +14,15 @@ angular.module('edu')
 			});		
 		    $scope.name = '';
 		    $scope.grade_level = '';
+		};
+
+		$scope.deleteSubject = function(curr_id, sub_id){		
+			console.log(sub_id)
+			subjects.delete({id: sub_id});		
+			
+			$location.path("/curriculums/" + curr_id);
+		    $scope.title = '';
+		    $scope.description = '';
 		};
 		
 }]);

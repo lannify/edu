@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :instructors
   devise_for :students
   root to: 'application#angular'
-  get 'destroy_subject/:id' => 'subjects#destroy'
+
   resources :curriculums
   resources :subjects
   resources :students
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :chapters
   resources :lessons
   resources :supplies
+  get 'destroy_subject/:id/:id2' => 'subjects#destroy'
 
 
 
