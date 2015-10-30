@@ -10,10 +10,13 @@ class SubjectsController < ApplicationController
     respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
   	end
 
+  	def destroy
+    	subject = Subject.find(params[:id])
+    	subject.destroy
 
-  	def edit
-    respond_with Subject.create(subject_params.merge(curriculum_id: params[:curriculum_id]))
+
   	end
+
 
 	private
 	def subject_params

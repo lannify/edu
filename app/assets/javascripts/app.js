@@ -51,11 +51,8 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 			controller: 'subjectsCtrl'
 		})
 
-		.state('edit_subject', {
-			url: '/edit_subject/:curriculum_id/:subject_id',
-			templateUrl: 'subjects/_editSubject.html',
-			controller: 'subjectsCtrl'
-		})
+
+
 
 		.state('add_course', {
 			url: '/add_course/:curriculum_id/:subject_id',
@@ -104,6 +101,14 @@ angular.module('edu', ['ui.router', 'templates', 'Devise', 'permission'])
 				})
 			}]
 		})
+
+		.state('destroy_subject', {
+			url: '/destroy_subject/:curriculum_id/:subject_id',
+			controller: 'subjectsCtrl',
+
+
+		})
+
 		.state('register', {
 			url: '/register',
 			templateUrl: 'auth/_register.html',

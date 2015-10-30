@@ -18,5 +18,14 @@ angular.module('edu')
 		    $scope.title = '';
 		    $scope.description = '';
 		};
+
+		$scope.deleteSubject = function(id){		
+
+			subjects.delete(id);		
+			
+			$location.path("/curriculums/" + $stateParams.curriculum_id);
+		    $scope.title = '';
+		    $scope.description = '';
+		};
 		
 }]);
