@@ -7,8 +7,8 @@ CurricuLearn - Learning platform for homeschool parents and students
 
 Deployed on AWS at [curriculearn.xyz](http://www.curriculearn.xyz) 
 
-<img src="cl-landing-1.png" align="center" width="100%" height="100%" />
-<img src="cl-lesson-4.png" align="center" width="100%" height="100%" />
+<img src="screenshots/cl-landing-1.png" align="center" width="100%" height="100%" />
+<img src="screenshots/cl-lesson-4.png" align="center" width="100%" height="100%" />
 
 
 ## Overview
