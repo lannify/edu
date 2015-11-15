@@ -24,13 +24,19 @@ Curriculum.create([
 		grade_level: 5,
 		category_id: 3,
 		user_id: 1
+	},
+	{ 
+		name: "AngularJS on Rails",
+		grade_level: 12,
+		category_id: 3,
+		user_id: 2
 	}
 ])
 
 Subject.create([
 	{
 		title: "Science",
-		description: "Numbers and stuff",
+		description: "The fifth grade science curriculum contains numerous lessons, quizzes and chapter tests, all organized into a variety of chapters",
 		curriculum_id: 1
 	},
 	{
@@ -40,25 +46,20 @@ Subject.create([
 	},
 	{
 		title: "Math",
-		description: "How to look after little boys and girls",
+		description: "The third grade math curriculum contains numerous math lessons, along with printable worksheets, quizzes and chapter tests.",
 		curriculum_id: 2
 	},
 	{
-		title: "Science",
-		description: "Step 1: Be an artist, Step 2: Draw comics",
-		curriculum_id: 2
-	},
-	{
-		title: "History",
-		description: "Step 1: Make noodles, Step 2: Add broth and rest of pho",
+		title: "Social Studies",
+		description: "The third grade social studies curriculum contains numerous lessons, as well as worksheets and quizzes, organized into different chapters. Members use the social studies curriculum as a third grade social studies tutorial, for extra practice, or to supplement their homeschooling approach.",
 		curriculum_id: 2
 	}
 ])
 
 Course.create([
 	{
-		title: "Biology",
-		description: "Plants",
+		title: "Organisms",
+		description: " Students learn about cells and their characteristics, organisms, plants and animals, the use and parts of a microscope",
 		subject_id: 1
 	},
 	{
@@ -67,121 +68,111 @@ Course.create([
 		subject_id: 1
 	},
 	{
-		title: "Algebra 1",
-		description: "Hemingway",
+		title: "World History",
+		description: "Lorem history ipsum",
 		subject_id: 2
 	},
 	{
-		title: "Geomtry",
-		description: "Dickens",
+		title: "US History",
+		description: "Lorem history ipsum",
 		subject_id: 2
 	},
 	{
-		title: "Algebra 1",
-		description: "Hemingway",
+		title: "Multiplication and Division",
+		description: "Teaches the meanings of operations and how they relate to one another. Lessons also cover multiplying and dividing with two digit numbers.",
 		subject_id: 3
 	},
 	{
-		title: "Geomtry",
-		description: "Dickens",
+		title: "Fractions and Decimals",
+		description: "Teaches the ways of representing fractional and decimal numbers. Lessons also cover parts of a set, estimation, and comparisons.",
 		subject_id: 3
 	},
 	{
-		title: "Algebra 1",
-		description: "Hemingway",
+		title: "World Geography",
+		description: "Lorem ipsum",
 		subject_id: 4
 	},
 	{
-		title: "Geomtry",
-		description: "Dickens",
+		title: "Economic System",
+		description: "Lorem ipsum",
 		subject_id: 4
-	},
-	{
-		title: "Algebra 1",
-		description: "Hemingway",
-		subject_id: 5
-	},
-	{
-		title: "Geomtry",
-		description: "Dickens",
-		subject_id: 5
 	}
 	
 ])
 
 Chapter.create([
 	{
-		title: "Newton's Laws",
-		description: "a^2 + b^2 = c^2",
+		title: "Plants",
+		description: "Lorem coffee ipsum",
 		course_id: 1
 	},
 	{
-		title: "Horce Race Chess",
-		description: "a^2 + b^2 = c^2",
+		title: "Animals",
+		description: "Lorem coffee ipsum",
 		course_id: 1
 	},
 	{
-		title: "Velocity",
-		description: "a^2 + b^2 = c^2",
+		title: "How to use a microscope",
+		description: "Lorem coffee ipsum",
 		course_id: 1
 	},
 	{
-		title: "Plant Life",
+		title: "Newton's Law",
 		description: "a^2 + b^2 = c^2",
 		course_id: 2
 	},
 	{
-		title: "Reproduction",
-		description: "a^2 + b^2 = c^2",
+		title: "Gravity",
+		description: "Lorem coffee ipsum",
 		course_id: 2
 	},
 	{
-		title: "Photosynthesis",
-		description: "a^2 + b^2 = c^2",
+		title: "Light",
+		description: "Lorem coffee ipsum",
 		course_id: 2
 	},
 	{
-		title: "Pythagarium Therum",
-		description: "a^2 + b^2 = c^2",
+		title: "Egypt",
+		description: "Lorem coffee ipsum",
 		course_id: 3
 	},
 	{
-		title: "Counting",
-		description: "a^2 + b^2 = c^2",
+		title: "Rome",
+		description: "Lorem coffee ipsum",
 		course_id: 3
 	},
 	{
-		title: "Equatin Clues",
-		description: "a^2 + b^2 = c^2",
+		title: "China",
+		description: "Lorem coffee ipsum",
 		course_id: 3
 	},
 	{
-		title: "Square",
-		description: "a^2 + b^2 = c^2",
+		title: "The Civil War",
+		description: "Lorem coffee ipsum",
 		course_id: 4
 	},
 	{
-		title: "Circle",
-		description: "a^2 + b^2 = c^2",
+		title: "George Washington against zombies",
+		description: "Lorem coffee ipsum",
 		course_id: 4
 	},
 	{
-		title: "Triangle",
-		description: "a^2 + b^2 = c^2",
+		title: "Ike",
+		description: "Lorem coffee ipsum",
 		course_id: 4
 	},
 	{
-		title: "Pythagarium Therum",
+		title: "Multiplication",
 		description: "a^2 + b^2 = c^2",
 		course_id: 5
 	},
 	{
-		title: "Counting",
+		title: "Division",
 		description: "a^2 + b^2 = c^2",
 		course_id: 5
 	},
 	{
-		title: "Equatin Clues",
+		title: "Usesful Tips",
 		description: "a^2 + b^2 = c^2",
 		course_id: 5
 	},
@@ -201,64 +192,34 @@ Chapter.create([
 		course_id: 6
 	},
 	{
-		title: "Pythagarium Therum",
+		title: "France",
 		description: "a^2 + b^2 = c^2",
 		course_id: 7
 	},
 	{
-		title: "Counting",
+		title: "Italy",
 		description: "a^2 + b^2 = c^2",
 		course_id: 7
 	},
 	{
-		title: "Equatin Clues",
+		title: "Japan",
 		description: "a^2 + b^2 = c^2",
 		course_id: 7
 	},
 	{
-		title: "Square",
+		title: "Money",
 		description: "a^2 + b^2 = c^2",
 		course_id: 8
 	},
 	{
-		title: "Circle",
+		title: "Taxes",
 		description: "a^2 + b^2 = c^2",
 		course_id: 8
 	},
 	{
-		title: "Triangle",
+		title: "More taxes",
 		description: "a^2 + b^2 = c^2",
 		course_id: 8
-	},
-	{
-		title: "Pythagarium Therum",
-		description: "a^2 + b^2 = c^2",
-		course_id: 9
-	},
-	{
-		title: "Counting",
-		description: "a^2 + b^2 = c^2",
-		course_id: 9
-	},
-	{
-		title: "Equatin Clues",
-		description: "a^2 + b^2 = c^2",
-		course_id: 9
-	},
-	{
-		title: "Square",
-		description: "a^2 + b^2 = c^2",
-		course_id: 10
-	},
-	{
-		title: "Circle",
-		description: "a^2 + b^2 = c^2",
-		course_id: 10
-	},
-	{
-		title: "Triangle",
-		description: "a^2 + b^2 = c^2",
-		course_id: 10
 	}
 ])
 
@@ -282,9 +243,9 @@ Lesson.create([
 
 User.create([
 	{
-		name: "Brendan Shanahan",
-		email: "test@test.com",
-		user_level: 2,
+		name: "Lan Nguyen",
+		email: "lan@hi.com",
+		user_level: 1,
 		password: "asdfasdf",
 		password_confirmation: "asdfasdf"
 	}
