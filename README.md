@@ -5,7 +5,7 @@ This README Last Updated: 2015/11/04
 
 CurricuLearn - Learning platform for homeschool parents and students
 
-Deployed on AWS at [curriculearn.xyz](http://www.curriculearn.xyz) 
+Deployed on AWS at [curriculearn.xyz](http://www.curriculearn.xyz | http://54.218.64.162 )
 
 <img src="screenshots/cl-landing-1.png" align="center" width="100%" height="100%" />
 <img src="screenshots/cl-lesson-4.png" align="center" width="100%" height="100%" />
